@@ -1,3 +1,10 @@
+<footer class="main-footer">
+    <strong>Copyright &copy; 2014-2021 <a href="#">Prakhar Softwaire</a>.</strong>
+    All rights reserved.
+</footer>
+
+
+</div>
  <!-- jQuery -->
  <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
  <!-- jQuery UI 1.11.4 -->
@@ -30,3 +37,6 @@
  <script src="{{ asset('assets/dist/js/adminlte.js') }}"></script>
  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
  <script src="{{ asset('assets/dist/js/pages/dashboard.js') }}"></script>
+</body>
+
+</html>
