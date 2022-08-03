@@ -693,7 +693,7 @@
         <!-- ============================================-->
         <!-- <section> begin ============================-->
         <section>
-            <div class="bg-holder overlay overlay-elixir" style="background-image:url(assets/img/background-15.jpg);">
+            <div class="bg-holder overlay overlay-elixir" style="background-image:url({{asset('main/assets/img/background-15.jpg')}});">
             </div>
             <!--/.bg-holder-->
             <div class="container">
@@ -922,7 +922,7 @@
 
     <!-- ============================================-->
     <!-- <section> begin ============================-->
-    <section style="background-color: #3D4C6F">
+    <section style="background-color: #055e03">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -989,7 +989,7 @@
     <footer class="footer bg-primary text-center py-4">
         <div class="container">
             <div class="row align-items-center opacity-85 text-white">
-                <div class="col-sm-3 text-sm-start"><a href="index-2.html"><img src="{{asset('main/assets/img/logo-light.png')}}"
+                <div class="col-sm-3 text-sm-start"><a href="index-2.html"><img src="{{asset('main/assets/img/logo-dark.png')}}"
                             alt="logo" /></a></div>
                 <div class="col-sm-6 mt-3 mt-sm-0">
                     <p class="lh-lg mb-0 fw-semi-bold">&copy; Copyright 2021 Elixir Inc.</p>

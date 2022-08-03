@@ -5,7 +5,7 @@
     }
 </style>
 <nav class="navbar navbar-expand-lg"> <a class="navbar-brand" href="index-2.html"><img
-            src="{{ asset('main/assets/img/logo-dark.png') }}" alt="logo" /></a><button class="navbar-toggler p-0"
+            src="{{ asset('main/assets/img/logo-dark.png') }}" style="height: 63px !important" alt="logo" /></a><button class="navbar-toggler p-0"
         type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavbarCollapse"
         aria-controls="primaryNavbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span
             class="hamburger hamburger--emphatic"><span class="hamburger-box"><span

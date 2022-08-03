@@ -33,4 +33,22 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Open+Sans:wght@300;400;600;700;800&amp;display=swap"
         rel="stylesheet">
+    <style>
+        body,a{
+            color: green !important;
+        }
+        h1,h2,h3,h4,h5,h6,svg{
+            color: rgb(10, 119, 10) !important;
+        }
+        .bg-primary{
+            background-color: rgb(8, 77, 8) !important;
+        }
+        .btn-primary{
+            background-color: rgb(8, 77, 8) !important;
+            color: white !important;
+        }
+      header  .btn{
+            color: white !important;
+        }
+    </style>
 </head>
