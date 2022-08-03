@@ -1,0 +1,12 @@
+<script src="{{asset('main/vendors/popper/popper.min.js')}}"></script>
+<script src="{{asset('main/vendors/bootstrap/bootstrap.min.js')}}"></script>
+<script src="{{asset('main/vendors/is/is.min.js')}}"></script>
+<script src="{{asset('main/vendors/bigpicture/BigPicture.js')}}"></script>
+<script src="{{asset('main/vendors/countup/countUp.umd.js')}}"></script>
+<script src="{{asset('main/vendors/swiper/swiper-bundle.min.js')}}"></script>
+<script src="{{asset('main/vendors/fontawesome/all.min.js')}}"></script>
+<script src="{{asset('main/vendors/lodash/lodash.min.js')}}"></script>
+<script src="{{asset('main/vendors/imagesloaded/imagesloaded.pkgd.min.js')}}"></script>
+<script src="{{asset('main/vendors/gsap/gsap.js')}}"></script>
+<script src="{{asset('main/vendors/gsap/customEase.js')}}"></script>
+<script src="{{asset('main/assets/js/theme.js')}}"></script>
