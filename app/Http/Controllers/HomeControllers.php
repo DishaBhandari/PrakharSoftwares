@@ -9,7 +9,6 @@ class HomeControllers extends Controller
 {
     public function  header($parent_id)
     {
-        global $con;
         $menu = "";
         $res = menuBar::where('parent_id', $parent_id)->orderBy('sort', 'ASC')->get();
         foreach ($res as $menuitem) {
