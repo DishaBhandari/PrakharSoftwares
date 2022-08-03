@@ -32,8 +32,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('sessions');
     }
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 00d307e (new update)
