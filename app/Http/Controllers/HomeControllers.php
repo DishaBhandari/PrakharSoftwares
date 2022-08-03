@@ -37,6 +37,16 @@ class HomeControllers extends Controller
         $data = menuBar::get();
         return view('admin.addNav', compact('data'));
     }
+    public function allnav()
+    {
+        $data = menuBar::get();
+        return view('admin.allnav', compact('data'));
+    }
+    public function delete($id)
+    {
+        $data = menuBar::where('menu_id',$id)->delete();
+        return redirect('allnav');
+    }
     public function addnavform(Request $request)
     {
         $data = $request->all();
