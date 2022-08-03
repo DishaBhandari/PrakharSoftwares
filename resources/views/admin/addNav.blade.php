@@ -86,43 +86,10 @@
                                                     @endforeach
                                                 </select>
                                             </div>
-
-                                        </div>
-                                        <div class="col-sm-6">
-
-                                            <div class="form-group">
-                                                <label for="sort">
-                                                    Sort By</label>
-                                                <input type="number" class="form-control" name="sort" id="sort"
-                                                    placeholder="Enter ...">
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div id="alertsuccess"
-                                        style="position: fixed ; top:20%; text-align: left !important; z-index:99999;display: none;"
-                                        class="alert alert-success" role="alert">
-                                        Blog Created Successfully.
-                                    </div>
-                                    <div id="alerterr"
-                                        style="position: fixed ; top:20%; text-align: center !important; z-index:99999;display: none;"
-                                        class="alert alert-danger" role="alert">
-                                        A simple success alert with. Give it a click if you like.
-                                    </div>
-                                    <div class="col-sm-6">
-
-                                        <div class="form-group">
-                                            <input type="submit" class="btn btn-primary col-4" value="Submit">
-                                        </div>
-
-                                    </div>
-                                </form>
-                            </div>
-
-                        </div>
-                    </div>
-            </section>
-            <!-- /.content -->
+                <!-- /.row (main row) -->
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
@@ -132,44 +99,5 @@
 
 
     </div>
-    <!-- ./wrapper -->
-
-    @include('admin.common.footer')
-
-    <script>
-        $('#addnavform').submit(function(e) {
-            e.preventDefault();
-            data = new FormData(this);
-            $.ajax({
-                data: data,
-                type: "POST",
-                url: "{{ route('addnavform') }}",
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                cache: false,
-                contentType: false,
-                processData: false,
-                error: function(request, status, error) {
-                    data = $.parseJSON(request.responseText);
-                    $('#alerterr').text(data.message.split('.')['0']);
-                    $('#alerterr').fadeIn();
-                    $('#alerterr').delay(4000).fadeOut();
-                },
-                success: function(data) {
-                    $('#addnavform')[0].reset();
-                    $('#alertsuccess').text(data);
-                    $('#alertsuccess').fadeIn();
-                    $('#alertsuccess').delay(4000).fadeOut();
-                    // console.log(data);
-                    // setTimeout(() => {
-
-                    //     location.href = "{{ url('/dashboard') }}";
-                    // }, 4000);
-                }
-            });
-        })
-    </script>
-</body>
 
 </html>
