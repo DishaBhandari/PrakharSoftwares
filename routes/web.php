@@ -13,7 +13,7 @@ use App\Http\Controllers\HomeControllers;
 |
 */
 
-Route::get('/',[HomeControllers::class,'index']);
+Route::get('/', [HomeControllers::class, 'index']);
 
 Route::middleware([
     'auth:sanctum',
@@ -23,4 +23,6 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('admin.index');
     })->name('dashboard');
+    Route::get('/addnav',[HomeControllers::class,'nav'])->name('addnav');
+    Route::post('/addnavform',[HomeControllers::class,'addnavform'])->name('addnavform');
 });
