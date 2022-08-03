@@ -8,9 +8,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class menuBar extends Model
 {
     use SoftDeletes;
-    protected $hidden = [
+    protected $fillable = [
+        'sort',
         'menu_name',
         'link',
+        'submenu_count',
         'parent_id'
     ];
 }

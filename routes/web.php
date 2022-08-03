@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeControllers;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('main.index');
-});
+Route::get('/',[HomeControllers::class,'index']);
 
 Route::middleware([
     'auth:sanctum',

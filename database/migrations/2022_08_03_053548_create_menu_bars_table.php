@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('menu_name', 100);
             $table->string('link', 255);
             $table->integer('parent_id')->default(0);
-            $table->integer('sort')->default(1);
+            $table->integer('sort');
+            $table->integer('submenu_count');
             $table->softDeletes();
             $table->timestamps();
         });
