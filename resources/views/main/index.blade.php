@@ -986,11 +986,11 @@
     </section><!-- <section> close ============================-->
     <!-- ============================================-->
 
-    <footer class="footer bg-primary text-center py-4">
+    <footer class="footer bg-primary text-center py-4" style="height: 130spx;">
         <div class="container">
-            <div class="row align-items-center opacity-85 text-white">
-                <div class="col-sm-3 text-sm-start"><a href="index-2.html"><img src="{{asset('main/assets/img/logo-dark.png')}}"
-                            alt="logo" /></a></div>
+            <div class="row align-items-center opacity-85 text-white ">
+                <div class="col-sm-3 text-sm-start "><a href="index-2.html" style="margin-bottom: 10px !important"><img src="{{asset('main/assets/img/logo-dark2.png')}}"
+                          style="height: 68px;  border-radius:20px; background-color:white;"  alt="logo" /></a></div>
                 <div class="col-sm-6 mt-3 mt-sm-0">
                     <p class="lh-lg mb-0 fw-semi-bold">&copy; Copyright 2021 Elixir Inc.</p>
                 </div>
