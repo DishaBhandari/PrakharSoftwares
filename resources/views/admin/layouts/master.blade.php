@@ -4,4 +4,6 @@
 
     @yield('dashboard')
 
+
     @include('admin.layouts.footer')
+    @yield('footerasset')
