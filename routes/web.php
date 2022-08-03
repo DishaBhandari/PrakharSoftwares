@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeControllers;
+use App\Http\Controllers\Admin\ServiceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,4 +26,7 @@ Route::middleware([
     })->name('dashboard');
     Route::get('/addnav',[HomeControllers::class,'nav'])->name('addnav');
     Route::post('/addnavform',[HomeControllers::class,'addnavform'])->name('addnavform');
+
+    Route::get('/addService',[ServiceController::class,'addService'])->name('addService');
+    Route::post('/addServiceForm',[ServiceController::class,'postService'])->name('postAddService');
 });

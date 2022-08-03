@@ -50,6 +50,12 @@
                             Add Nav
                         </p>
                     </a>
+                    <a href="{{ url('/addService') }}" class="nav-link {{ request()->is('addService') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Add Service
+                        </p>
+                    </a>
                 </li>
             </ul>
         </nav>
