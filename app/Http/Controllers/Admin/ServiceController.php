@@ -12,7 +12,7 @@ class ServiceController extends Controller
 {
     public function addService()
     {
-        $data = menuBar::where('menu_name', 'Services')->orWhere('parent_id',3)->get();
+        $data = menuBar::where('menu_name', 'Services')->orWhere(' ',3)->get();
         return view('admin.addService', compact('data'));
     }
     // summer note add image 
