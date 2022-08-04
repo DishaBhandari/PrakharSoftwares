@@ -39,58 +39,62 @@
                                         <div class="form-group">
                                             <label for="menu_name">
                                                 Sub Menu Name</label>
-                                                <select name="sub_menu" class="form-control" required>
-                                                    <option >None</option>
-                                                   
-                                                </select>
+                                            <select name="sub_menu" class="form-control" required>
+                                                <option value="0">None</option>
+                                                @foreach ($data as $item)
+                                                    <option value="{{$item->menu_id}}">{{$item->menu_name}}</option>
+                                                @endforeach
+
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="link">Menu Url</label>
-                                            <input type="text" class="form-control" name="slug" id="slug" required
-                                                placeholder="Enter Url ">
+                                            <input type="text" class="form-control" name="slug" id="slug"
+                                                required placeholder="Enter Url ">
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="link">Meta Title</label>
-                                            <input type="text" class="form-control" name="meta_title" id="meta_title" required
-                                                placeholder="Enter Meta Title ">
+                                            <input type="text" class="form-control" name="meta_title" id="meta_title"
+                                                required placeholder="Enter Meta Title ">
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="link">Meta keyword</label>
-                                            <input type="text" class="form-control" name="meta_keyword" id="meta_keyword" required
-                                                placeholder="Enter Meta Keyword ">
+                                            <input type="text" class="form-control" name="meta_keyword" id="meta_keyword"
+                                                required placeholder="Enter Meta Keyword ">
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="link">Meta Description</label>
-                                            <input type="text" class="form-control" name="meta_description" id="meta_description" required
-                                                placeholder="Enter Meta Description ">
+                                            <input type="text" class="form-control" name="meta_description"
+                                                id="meta_description" required placeholder="Enter Meta Description ">
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="link">Page Name/Main Heading</label>
-                                            <input type="text" class="form-control" name="page_name" id="page_name" required
-                                                placeholder="Enter Page Name">
+                                            <input type="text" class="form-control" name="page_name" id="page_name"
+                                                required placeholder="Enter Page Name">
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="link">Banner Image</label>
-                                            <input type="file" class="form-control"  accept="image/*" name="banner" id="banner" required
-                                                placeholder="Enter ">
+                                            <input type="file" class="form-control" accept="image/*" name="banner"
+                                                id="banner" required placeholder="Enter ">
                                         </div>
                                     </div>
                                     <div class="col-sm-8">
                                         <div class="form-group">
                                             <label for="link">Page Content</label>
-                                            <textarea class="form-control summernote" name="content" id="content" required cols="4" rows="3"></textarea>
+                                            <textarea class="form-control summernote" id="summernote" name="content" id="content" required cols="4"
+                                                rows="3"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -107,7 +111,8 @@
                                 <div class="col-sm-6">
 
                                     <div class="form-group">
-                                        <input type="submit" class="btn btn-primary col-4" id="addServiceSubmit" value="Submit">
+                                        <input type="submit" class="btn btn-primary col-4" id="addServiceSubmit"
+                                            value="Submit">
                                     </div>
 
                                 </div>
@@ -123,9 +128,80 @@
 @endsection
 @section('scripts')
     <script>
-         $(document).ready(function() {
-          $('.summernote').summernote();
+        $('.summernote').summernote({
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear', 'fontsize']],
+                ['fontname', ['fontname']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']],
+            ],
+            height: 220,
+            callbacks: {
+                onImageUpload: function(image, editor, welEditable) {
+                    uploadImage(image, editor, welEditable)
+                },
+                onMediaDelete: function(target) {
+                    deleteimg(target[0].src);
+                }
+            }
+
         });
+        $('.summernote').summernote('fontSizeUnit', 'px');
+        $('.summernote').summernote('removeFormat');
+
+        function uploadImage(image, editor, welEditable) {
+            var data = new FormData($('#addnavform')['0']);
+
+            $.ajax({
+                url: "{{ url('/services/saveimage') }}",
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: data,
+                type: "post",
+                success: function(url) {
+                    if (url) {
+                        console.log(url);
+                        var image = $('<img>').attr('src', url);
+                        $('#summernote').summernote("insertNode", image[0]);
+
+
+                    }
+                },
+                error: function(data) {
+                    console.log(data);
+                }
+            });
+        }
+
+        function deleteimg(file) {
+            var data = new FormData();
+            data.append('deleteurl', file);
+            $.ajax({
+                url: "{{ url('/services/delete') }}",
+                data: {
+                    data: file
+                },
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: data,
+                type: "post",
+                success: function(url) {
+                    console.log(url);
+                }
+            });
+        }
 
         // $('#addServiceSubmit').submit(function(e) {
         //     e.preventDefault();
