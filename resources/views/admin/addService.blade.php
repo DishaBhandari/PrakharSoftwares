@@ -35,48 +35,33 @@
                             <form method="POST" id="addnavform">
                                 @csrf
                                 <div class="row">
-                                    <div class="col-sm-6">
-
+                                    <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="menu_name">
-                                                Menu Name</label>
-                                            <input type="text" name="menu_name" class="form-control" id="menu_name"
-                                                placeholder="Enter ...">
+                                                Sub Menu Name</label>
+                                                <select name="sub_menu" class="form-control">
+                                                    <option value="0">None</option>
+                                                   
+                                                </select>
                                         </div>
-
                                     </div>
-                                    <div class="col-sm-6">
-
+                                    <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="link">Menu Url</label>
-                                            <input type="text" class="form-control" name="link" id="link"
-                                                placeholder="Enter ...">
+                                            <input type="text" class="form-control" name="slug" id="slug"
+                                                placeholder="Enter Url ">
                                         </div>
-
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="link">Meta Title</label>
+                                            <input type="text" class="form-control" name="meta_title" id="meta_title"
+                                                placeholder="Enter Meta Title ">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-sm-6">
-
-                                        <div class="form-group">
-                                            <label for="parent_id" id="parent_id">Add Under Menu</label>
-                                            <select name="parent_id" class="form-control">
-                                                <option value="0">None</option>
-                                               
-                                            </select>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-sm-6">
-
-                                        <div class="form-group">
-                                            <label for="sort">
-                                                Sort By</label>
-                                            <input type="number" class="form-control" name="sort" id="sort"
-                                                placeholder="Enter ...">
-                                        </div>
-
-                                    </div>
+                                  
                                 </div>
                                 <div id="alertsuccess"
                                     style="position: fixed ; top:20%; text-align: left !important; z-index:99999;display: none;"
@@ -105,7 +90,6 @@
     </div>
 
 @endsection
-@section('footerasset')
     <script>
         $('#addnavform').submit(function(e) {
             e.preventDefault();
