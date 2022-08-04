@@ -50,10 +50,3 @@
     </div>
 
 @endsection
-@section('footerasset')
-    </body>
-
-    </html>
-
-
-@endsection

@@ -36,6 +36,33 @@
                   data-accordion="false">
                   <!-- Add icons to the links using the .nav-icon class
      with font-awesome or any other icon font library -->
+                <li class="nav-item menu-open">
+                    <a href="{{ url('/dashboard') }}"
+                        class="nav-link {{ request()->is('dashboard') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Dashboard
+                        </p>
+                    </a>
+                    <a href="{{ url('/addnav') }}" class="nav-link {{ request()->is('addnav') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Add Nav
+                        </p>
+                    </a>
+                    <a href="{{ url('/addService') }}" class="nav-link {{ request()->is('addService') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Add Service
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
                   <li class="nav-item menu-open">
                       <a href="{{ url('/dashboard') }}"
                           class="nav-link {{ request()->is('dashboard') ? 'active' : '' }}">

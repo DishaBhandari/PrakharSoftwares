@@ -108,7 +108,7 @@
     </div>
 
 @endsection
-@section('footerasset')
+@section('scripts')
     <script>
         $('#addnavform').submit(function(e) {
             e.preventDefault();

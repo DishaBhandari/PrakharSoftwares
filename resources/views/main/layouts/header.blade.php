@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,7 +11,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Elixir | Beautiful Site Template for Agencies &amp; Professionals</title>
+    <title>@yield('title')</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -83,3 +88,21 @@
         }
     </style>
 </head>
+<body>
+    
+    <div class="bg-primary py-3 d-none d-sm-block text-white fw-bold">
+        <div class="container">
+            <div class="row align-items-center gx-4">
+                <div class="col-auto d-none d-lg-block fs--1"><span class="fas fa-map-marker-alt text-warning me-2"
+                        data-fa-transform="grow-3"></span>1010 Avenue, New York, NY 10018 US. </div>
+                <div class="col-auto ms-md-auto order-md-2 d-none d-sm-flex fs--1 align-items-center"><span
+                        class="fas fa-clock text-warning me-2" data-fa-transform="grow-3"></span>Mon-Sat, 8.00-18.00.
+                    Sunday CLOSED</div>
+                <div class="col-auto"><span class="fas fa-phone-alt text-warning" data-fa-transform="shrink-3"></span><a
+                        class="ms-2 fs--1 d-inline text-white fw-bold" href="tel:2123865575">212 386 5575, 212 386
+                        5576</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="sticky-top navbar-elixir">
+        <div class="container">

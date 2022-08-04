@@ -73,10 +73,7 @@
     </div>
 
 @endsection
-@section('footerasset')
-    </body>
-
-    </html>
-
+@section('scripts')
+   
 
 @endsection
