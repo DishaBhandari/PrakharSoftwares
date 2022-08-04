@@ -26,7 +26,7 @@
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
-                    <div class="card card-warning col-11 m-auto">
+                    <div class="card  col-11 m-auto">
                         <div class="card-header">
                             <h3 class="card-title">Add Service</h3>
                         </div>
@@ -39,8 +39,8 @@
                                         <div class="form-group">
                                             <label for="menu_name">
                                                 Sub Menu Name</label>
-                                                <select name="sub_menu" class="form-control">
-                                                    <option value="0">None</option>
+                                                <select name="sub_menu" class="form-control" required>
+                                                    <option >None</option>
                                                    
                                                 </select>
                                         </div>
@@ -48,49 +48,49 @@
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="link">Menu Url</label>
-                                            <input type="text" class="form-control" name="slug" id="slug"
+                                            <input type="text" class="form-control" name="slug" id="slug" required
                                                 placeholder="Enter Url ">
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="link">Meta Title</label>
-                                            <input type="text" class="form-control" name="meta_title" id="meta_title"
+                                            <input type="text" class="form-control" name="meta_title" id="meta_title" required
                                                 placeholder="Enter Meta Title ">
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="link">Meta keyword</label>
-                                            <input type="text" class="form-control" name="meta_keyword" id="meta_keyword"
+                                            <input type="text" class="form-control" name="meta_keyword" id="meta_keyword" required
                                                 placeholder="Enter Meta Keyword ">
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="link">Meta Description</label>
-                                            <input type="text" class="form-control" name="meta_description" id="meta_description"
+                                            <input type="text" class="form-control" name="meta_description" id="meta_description" required
                                                 placeholder="Enter Meta Description ">
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="link">Page Name/Main Heading</label>
-                                            <input type="text" class="form-control" name="page_name" id="page_name"
+                                            <input type="text" class="form-control" name="page_name" id="page_name" required
                                                 placeholder="Enter Page Name">
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="link">Banner Image</label>
-                                            <input type="file" class="form-control"  accept="image/*" name="banner" id="banner"
+                                            <input type="file" class="form-control"  accept="image/*" name="banner" id="banner" required
                                                 placeholder="Enter ">
                                         </div>
                                     </div>
                                     <div class="col-sm-8">
                                         <div class="form-group">
                                             <label for="link">Page Content</label>
-                                            <textarea class="form-control summernote" name="content" id="content" cols="4" rows="3"></textarea>
+                                            <textarea class="form-control summernote" name="content" id="content" required cols="4" rows="3"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -107,7 +107,7 @@
                                 <div class="col-sm-6">
 
                                     <div class="form-group">
-                                        <input type="submit" class="btn btn-primary col-4" value="Submit">
+                                        <input type="submit" class="btn btn-primary col-4" id="addServiceSubmit" value="Submit">
                                     </div>
 
                                 </div>
@@ -124,11 +124,10 @@
 @section('scripts')
     <script>
          $(document).ready(function() {
-            alert('hello')
           $('.summernote').summernote();
         });
 
-        // $('#addnavform').submit(function(e) {
+        // $('#addServiceSubmit').submit(function(e) {
         //     e.preventDefault();
         //     data = new FormData(this);
         //     $.ajax({
