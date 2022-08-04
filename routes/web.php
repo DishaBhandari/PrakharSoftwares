@@ -41,4 +41,6 @@ Route::middleware([
     Route::post('/addServiceForm',[ServiceController::class,'postService'])->name('postAddService');
     Route::post('/services/saveimage',[ServiceController::class,'create']);
     Route::post('/services/delete',[ServiceController::class,'delete']);
+
+    Route::get('/test',[ServiceController::class,'index'])->name('addService');
 });

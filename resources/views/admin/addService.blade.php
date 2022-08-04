@@ -48,13 +48,13 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-sm-4">
+                                    {{-- <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="link">Menu Url</label>
                                             <input type="text" class="form-control" name="slug" id="slug"
                                                 required placeholder="Enter Url ">
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="link">Meta Title</label>
@@ -90,7 +90,7 @@
                                                 id="banner" required placeholder="Enter ">
                                         </div>
                                     </div>
-                                    <div class="col-sm-8">
+                                    <div class="col-sm-12">
                                         <div class="form-group">
                                             <label for="link">Page Content</label>
                                             <textarea class="form-control summernote" id="summernote" name="content" id="content" required cols="4"

@@ -26,11 +26,14 @@
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
+                    @if(Session::has('alert-error'))
+                    <div class="col-sm-11 mx-auto alert alert-danger ">{{ (Session::get('alert-error')) }}</div>
+                    @endif                    
                     <div class="card card-warning col-11 m-auto">
                         <div class="card-header">
                             <h3 class="card-title">General Elements</h3>
                         </div>
-
+                       
                         <div class="card-body">
                             <form method="POST" id="addnavform">
                                 @csrf
