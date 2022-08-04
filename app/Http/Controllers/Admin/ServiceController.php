@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\Models\Service;
 use App\Models\menuBar;
@@ -10,10 +11,47 @@ use Carbon\Carbon;
 
 class ServiceController extends Controller
 {
-    public function addService()
+    public function  header($parent_id)
     {
+<<<<<<< HEAD
         $data = menuBar::where('menu_name', 'Services')->orWhere(' ',3)->get();
         return view('admin.addService', compact('data'));
+=======
+        $menu = "";
+        $res = menuBar::where('parent_id', $parent_id)->orderBy('sort', 'ASC')->get();
+        foreach ($res as $menuitem) {
+            $menu .= "<option value='" . $menuitem->menu_id .
+            "'>" . $menuitem->menu_name .
+                "</option>";
+            if ($menuitem->submenu_count > 0) {
+                $menu .= $this->header($menuitem->menu_id); //call  recursively}
+            }
+            $menu .= "
+            </li>";
+        }
+
+        return $menu;
+    }
+
+    public function index()
+    {
+       echo "<select>".$this->header(3)."</select>";
+        
+    }
+    public function addService()
+    {   
+        $id = menuBar::where('menu_name', 'Services')->first('menu_id')->menu_id;
+        
+        if(!empty($id)){
+            $data = menuBar::where('menu_id', 3)->Where('submenu_count','0')->get('menu_id','menu_name');
+        dd($data);
+
+            return view('admin.addService', compact('data'));
+        } else{
+            return redirect()->route('addnav')->with('alert-error','Please create menu first!');
+        }
+      
+>>>>>>> 4c7d07bb120353f0759240713aa92fa2125bee2c
     }
     // summer note add image 
     public function create(Request $request)
@@ -44,7 +82,7 @@ class ServiceController extends Controller
         $req->validate(
             [
                 'sub_menu' => 'required|unique:menu_bars',
-                'slug' => 'required',
+                // 'slug' => 'required',
                 'meta_title' => 'required',
                 'meta_keyword' => 'required',
                 'meta_description' => 'required',
@@ -78,7 +116,7 @@ class ServiceController extends Controller
 
             $service = new Service();
             $service->menu_id = $req->sub_menu;
-            $service->page_slug    = $req->sub_menu;
+            // $service->page_slug    = $req->sub_menu;
             $service->meta_title = $req->sub_menu;
             $service->meta_keyword = $req->sub_menu;
             $service->meta_description = $req->sub_menu;
