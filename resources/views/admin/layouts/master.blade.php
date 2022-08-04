@@ -1,9 +1,8 @@
-    @include('admin.layouts.header')
-    @include('admin.layouts.nav')
-    @include('admin.layouts.sideBar')
+@include('admin.layouts.header')
+@include('admin.layouts.nav')
+@include('admin.layouts.sideBar')
 
-    @yield('dashboard')
+@yield('dashboard')
 
 
-    @include('admin.layouts.footer')
-    @yield('footerasset')
+@include('admin.layouts.footer')
