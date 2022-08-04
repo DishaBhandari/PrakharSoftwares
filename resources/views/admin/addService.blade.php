@@ -41,10 +41,12 @@
                                                 Sub Menu Name</label>
                                             <select name="sub_menu" class="form-control" required>
                                                 <option value="0">None</option>
-                                                @foreach ($data as $item)
+                                                @foreach ($id as $item)
                                                     <option value="{{ $item->menu_id }}">{{ $item->menu_name }}</option>
                                                 @endforeach
-
+                                                    @php
+                                                        echo $data;
+                                                    @endphp
                                             </select>
                                         </div>
                                     </div>

@@ -17,7 +17,7 @@ class ServiceController extends Controller
         $res = menuBar::where('parent_id', $parent_id)->orderBy('sort', 'ASC')->get();
         foreach ($res as $menuitem) {
             $menu .= "<option value='" . $menuitem->menu_id .
-            "'>" . $menuitem->menu_name .
+                "'>" . $menuitem->menu_name .
                 "</option>";
             if ($menuitem->submenu_count > 0) {
                 $menu .= $this->header($menuitem->menu_id); //call  recursively}
@@ -29,24 +29,13 @@ class ServiceController extends Controller
         return $menu;
     }
 
-    public function index()
-    {
-       echo "<select>".$this->header(3)."</select>";
-        
-    }
-    public function addService()
-    {   
-        $id = menuBar::where('menu_name', 'Services')->first('menu_id')->menu_id;
-        
-        if(!empty($id)){
-            $data = menuBar::where('menu_id', 3)->Where('submenu_count','0')->get('menu_id','menu_name');
-        dd($data);
 
-            return view('admin.addService', compact('data'));
-        } else{
-            return redirect()->route('addnav')->with('alert-error','Please create menu first!');
-        }
-      
+    public function addService()
+    {
+        $data = $this->header(3);
+        $id = menuBar::where('menu_name','Services')->get();
+
+        return view('admin.addService', compact('data','id'));
     }
     // summer note add image 
     public function create(Request $request)
