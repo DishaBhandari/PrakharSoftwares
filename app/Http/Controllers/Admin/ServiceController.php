@@ -5,12 +5,12 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Service;
-
+use App\Models\menuBar;
 class ServiceController extends Controller
 {
     public function addService(){
-        $data = menuBar::where;
-        return view('admin.addService', compact($data));
+        $data = menuBar::where('menu_name','Services')->get();
+        return view('admin.addService', compact('data'));
     }
 
     public function postAddService(Request $req){

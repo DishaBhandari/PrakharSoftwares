@@ -1,7 +1,7 @@
 @extends('main.layouts.master')
-@section('title','Home')
+@section('title', 'Home')
 @section('content')
-        </div>
+    </div>
     </div>
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -23,7 +23,8 @@
                 data-swiper='{"loop":true,"allowTouchMove":false,"autoplay":{"delay":5000},"effect":"fade","speed":800}'>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" data-zanim-timeline="{}">
-                        <div class="bg-holder" style="background-image:url({{asset('main/assets/img/header-6.jpg')}});"></div>
+                        <div class="bg-holder" style="background-image:url({{ asset('main/assets/img/header-6.jpg') }});">
+                        </div>
                         <!--/.bg-holder-->
                         <div class="container">
                             <div class="row min-vh-100 py-8 align-items-center" data-inertia='{"weight":1.5}'>
@@ -32,8 +33,8 @@
                                         <h1 class="fs-4 fs-md-5 lh-1" data-zanim-xs='{"delay":0}'>Helping Leaders</h1>
                                     </div>
                                     <div class="overflow-hidden">
-                                        <p class="text-primary pt-4 mb-5 fs-1 fs-md-2 lh-xs"
-                                            data-zanim-xs='{"delay":0.1}'>We look forward to help you in taking your
+                                        <p class="text-primary pt-4 mb-5 fs-1 fs-md-2 lh-xs" data-zanim-xs='{"delay":0.1}'>
+                                            We look forward to help you in taking your
                                             company to new height.</p>
                                     </div>
                                     <div class="overflow-hidden">
@@ -48,7 +49,8 @@
                         </div>
                     </div>
                     <div class="swiper-slide" data-zanim-timeline="{}">
-                        <div class="bg-holder" style="background-image:url({{asset('main/assets/img/header-5.jpg')}});"></div>
+                        <div class="bg-holder" style="background-image:url({{ asset('main/assets/img/header-5.jpg') }});">
+                        </div>
                         <!--/.bg-holder-->
                         <div class="container">
                             <div class="row min-vh-100 py-8 align-items-center" data-inertia='{"weight":1.5}'>
@@ -58,8 +60,8 @@
                                         </h1>
                                     </div>
                                     <div class="overflow-hidden">
-                                        <p class="text-primary pt-4 mb-5 fs-1 fs-md-2 lh-xs"
-                                            data-zanim-xs='{"delay":0.1}'>Over 10 years of experience in helping
+                                        <p class="text-primary pt-4 mb-5 fs-1 fs-md-2 lh-xs" data-zanim-xs='{"delay":0.1}'>
+                                            Over 10 years of experience in helping
                                             clients finding comprehensive solutions.</p>
                                     </div>
                                     <div class="overflow-hidden">
@@ -74,7 +76,8 @@
                         </div>
                     </div>
                     <div class="swiper-slide" data-zanim-timeline="{}">
-                        <div class="bg-holder" style="background-image:url({{asset('main/assets/img/header-1.jpg')}});"></div>
+                        <div class="bg-holder" style="background-image:url({{ asset('main/assets/img/header-1.jpg') }});">
+                        </div>
                         <!--/.bg-holder-->
                         <div class="container">
                             <div class="row min-vh-100 py-8 align-items-center" data-inertia='{"weight":1.5}'>
@@ -83,8 +86,8 @@
                                         <h1 class="fs-4 fs-md-5 lh-1" data-zanim-xs='{"delay":0}'>Growth Partners</h1>
                                     </div>
                                     <div class="overflow-hidden">
-                                        <p class="text-primary pt-4 mb-5 fs-1 fs-md-2 lh-xs"
-                                            data-zanim-xs='{"delay":0.1}'>Connect with top consultants hand-picked by
+                                        <p class="text-primary pt-4 mb-5 fs-1 fs-md-2 lh-xs" data-zanim-xs='{"delay":0.1}'>
+                                            Connect with top consultants hand-picked by
                                             Elixir consulting and finance.</p>
                                     </div>
                                     <div class="overflow-hidden">
@@ -122,8 +125,8 @@
                 </div>
                 <div class="row mt-4 mt-md-5">
                     <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                        <div class="ring-icon mx-auto" data-zanim-xs='{"delay":0}'><span
-                                class="far fa-chart-bar"></span></div>
+                        <div class="ring-icon mx-auto" data-zanim-xs='{"delay":0}'><span class="far fa-chart-bar"></span>
+                        </div>
                         <h5 class="mt-4" data-zanim-xs='{"delay":0.1}'>Business Consulting</h5>
                         <p class="mb-0 mt-3 px-3" data-zanim-xs='{"delay":0.2}'>Solution for every business related
                             problems, readily <br /> and skillfully.</p>
@@ -136,15 +139,15 @@
                             business, take <br /> control over them.</p>
                     </div>
                     <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                        <div class="ring-icon mx-auto" data-zanim-xs='{"delay":0}'><span
-                                class="far fa-lightbulb"></span></div>
+                        <div class="ring-icon mx-auto" data-zanim-xs='{"delay":0}'><span class="far fa-lightbulb"></span>
+                        </div>
                         <h5 class="mt-4" data-zanim-xs='{"delay":0.1}'>Market Research</h5>
                         <p class="mb-0 mt-3 px-3" data-zanim-xs='{"delay":0.2}'>Know the market before taking any
                             step, reduce <br /> risks before you go.</p>
                     </div>
                     <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                        <div class="ring-icon mx-auto" data-zanim-xs='{"delay":0}'><span
-                                class="fas fa-headset"></span></div>
+                        <div class="ring-icon mx-auto" data-zanim-xs='{"delay":0}'><span class="fas fa-headset"></span>
+                        </div>
                         <h5 class="mt-4" data-zanim-xs='{"delay":0.1}'>Quality Services</h5>
                         <p class="mb-0 mt-3 px-3" data-zanim-xs='{"delay":0.2}'>Experience unparalleled service, from
                             beginning <br /> to final construction.</p>
@@ -164,10 +167,9 @@
                     <div class="col-12">
                         <div class="position-relative mt-4 py-5 py-md-11">
                             <div class="bg-holder rounded-3"
-                                style="background-image:url({{asset('main/assets/img/video-screenshot-2.jpg')}});"></div>
+                                style="background-image:url({{ asset('main/assets/img/video-screenshot-2.jpg') }});"></div>
                             <!--/.bg-holder-->
-                            <button class="btn-elixir-play"
-                                data-bigpicture="{&quot;ytSrc&quot;:&quot;jlWMTNZNOc0&quot;}"
+                            <button class="btn-elixir-play" data-bigpicture="{&quot;ytSrc&quot;:&quot;jlWMTNZNOc0&quot;}"
                                 data-zanim-trigger="scroll"
                                 data-zanim-xs='{"from":{"opacity":0,"scale":0.8},"to":{"opacity":1,"scale":1},"duration":1}'><span
                                     class="fas fa-play fs-1"></span></button>
@@ -184,8 +186,8 @@
                     </div>
                     <div class="col-sm-6 col-lg-4 mt-3 mt-lg-0 px-4 px-sm-3" data-zanim-timeline="{}"
                         data-zanim-trigger="scroll">
-                        <h5 data-zanim-xs='{"delay":0}'><span
-                                class="text-primary me-3 fas fa-comments"></span>Excellent Support</h5>
+                        <h5 data-zanim-xs='{"delay":0}'><span class="text-primary me-3 fas fa-comments"></span>Excellent
+                            Support</h5>
                         <p class="mt-3 pe-3 pe-lg-5" data-zanim-xs='{"delay":0.1}'>If you face any trouble, you can
                             always let our dedicated support team help you. They are ready for you 24/7.</p>
                     </div>
@@ -216,7 +218,7 @@
                 <div class="row g-0 position-relative mb-4 mb-lg-0">
                     <div class="col-lg-6 py-3 py-lg-0 mb-0 position-relative" style="min-height:400px;">
                         <div class="bg-holder rounded-ts-lg rounded-te-lg rounded-lg-te-0  "
-                            style="background-image:url({{asset('main/assets/img/6.jpg')}});"></div>
+                            style="background-image:url({{ asset('main/assets/img/6.jpg') }});"></div>
                         <!--/.bg-holder-->
                     </div>
                     <div
@@ -247,7 +249,7 @@
                 <div class="row g-0 position-relative mb-4 mb-lg-0">
                     <div class="col-lg-6 py-3 py-lg-0 mb-0 position-relative order-lg-2" style="min-height:400px;">
                         <div class="bg-holder rounded-ts-lg rounded-te-lg rounded-lg-te-0  rounded-lg-ts-0"
-                            style="background-image:url({{asset('main/assets/img/7.jpg')}});"></div>
+                            style="background-image:url({{ asset('main/assets/img/7.jpg') }});"></div>
                         <!--/.bg-holder-->
                     </div>
                     <div
@@ -278,7 +280,7 @@
                 <div class="row g-0 position-relative mb-4 mb-lg-0">
                     <div class="col-lg-6 py-3 py-lg-0 mb-0 position-relative" style="min-height:400px;">
                         <div class="bg-holder rounded-ts-lg rounded-te-lg rounded-lg-te-0 rounded-lg-ts-0 rounded-bs-0 rounded-lg-bs-lg "
-                            style="background-image:url({{asset('main/assets/img/8.jpg')}});"></div>
+                            style="background-image:url({{ asset('main/assets/img/8.jpg') }});"></div>
                         <!--/.bg-holder-->
                     </div>
                     <div
@@ -323,8 +325,8 @@
                     </div>
                     <div class="col-sm-6 col-lg-4 px-4 px-sm-3 mb-4 mb-lg-0" data-zanim-timeline="{}"
                         data-zanim-trigger="scroll">
-                        <h5 data-zanim-xs='{"delay":0}'><span
-                                class="text-primary fs-0 me-3 fas fa-phone-alt"></span>Call a specialist</h5>
+                        <h5 data-zanim-xs='{"delay":0}'><span class="text-primary fs-0 me-3 fas fa-phone-alt"></span>Call
+                            a specialist</h5>
                         <p class="mt-3 pe-3 pe-lg-5 mb-0" data-zanim-xs='{"delay":0.1}'>Our 24/7 support team is ready
                             for you at 1-800-MY-Elixir.</p>
                     </div>
@@ -346,8 +348,8 @@
                         data-zanim-trigger="scroll" />
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 pe-lg-3"><img class="rounded-3 img-fluid" src="{{asset('main/assets/img/why-choose-us.jpg')}}"
-                            alt="about" /></div>
+                    <div class="col-lg-6 pe-lg-3"><img class="rounded-3 img-fluid"
+                            src="{{ asset('main/assets/img/why-choose-us.jpg') }}" alt="about" /></div>
                     <div class="col-lg-6 px-lg-5 mt-6 mt-lg-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                         <div class="overflow-hidden">
                             <div class="px-4 px-sm-0" data-zanim-xs='{"delay":0}'>
@@ -389,8 +391,8 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md">
-                        <h4 class="text-white mb-0">If you have any query related investment... <br
-                                class="d-md-none" />we are available 24/7</h4>
+                        <h4 class="text-white mb-0">If you have any query related investment... <br class="d-md-none" />we
+                            are available 24/7</h4>
                     </div>
                     <div class="col-md-auto mt-md-0 mt-4"><a class="btn btn-light rounded-pill"
                             href="contact.html">Contact Us</a></div>
@@ -414,8 +416,8 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-4 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                         <div class="px-3 py-4 px-lg-4">
-                            <div class="overflow-hidden"><img src="{{asset('main/assets/img/icons/sharing.png')}}" alt="icon"
-                                    height="37" data-zanim-xs='{"delay":0}' /></div>
+                            <div class="overflow-hidden"><img src="{{ asset('main/assets/img/icons/sharing.png') }}"
+                                    alt="icon" height="37" data-zanim-xs='{"delay":0}' /></div>
                             <div class="overflow-hidden">
                                 <h5 class="mt-3" data-zanim-xs='{"delay":0.1}'>Creative Support</h5>
                             </div>
@@ -427,8 +429,8 @@
                     </div>
                     <div class="col-md-6 col-lg-4 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                         <div class="px-3 py-4 px-lg-4">
-                            <div class="overflow-hidden"><img src="{{asset('main/assets/img/icons/mail.png')}}" alt="icon"
-                                    height="37" data-zanim-xs='{"delay":0}' /></div>
+                            <div class="overflow-hidden"><img src="{{ asset('main/assets/img/icons/mail.png') }}"
+                                    alt="icon" height="37" data-zanim-xs='{"delay":0}' /></div>
                             <div class="overflow-hidden">
                                 <h5 class="mt-3" data-zanim-xs='{"delay":0.1}'>Creating Experiences</h5>
                             </div>
@@ -440,8 +442,8 @@
                     </div>
                     <div class="col-md-6 col-lg-4 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                         <div class="px-3 py-4 px-lg-4">
-                            <div class="overflow-hidden"><img src="{{asset('main/assets/img/icons/target.png')}}" alt="icon"
-                                    height="37" data-zanim-xs='{"delay":0}' /></div>
+                            <div class="overflow-hidden"><img src="{{ asset('main/assets/img/icons/target.png') }}"
+                                    alt="icon" height="37" data-zanim-xs='{"delay":0}' /></div>
                             <div class="overflow-hidden">
                                 <h5 class="mt-3" data-zanim-xs='{"delay":0.1}'>Product Consulting</h5>
                             </div>
@@ -453,8 +455,8 @@
                     </div>
                     <div class="col-md-6 col-lg-4 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                         <div class="px-3 py-4 px-lg-4">
-                            <div class="overflow-hidden"><img src="{{asset('main/assets/img/icons/world-globe.png')}}" alt="icon"
-                                    height="37" data-zanim-xs='{"delay":0}' /></div>
+                            <div class="overflow-hidden"><img src="{{ asset('main/assets/img/icons/world-globe.png') }}"
+                                    alt="icon" height="37" data-zanim-xs='{"delay":0}' /></div>
                             <div class="overflow-hidden">
                                 <h5 class="mt-3" data-zanim-xs='{"delay":0.1}'>Business Boosting</h5>
                             </div>
@@ -466,8 +468,8 @@
                     </div>
                     <div class="col-md-6 col-lg-4 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                         <div class="px-3 py-4 px-lg-4">
-                            <div class="overflow-hidden"><img src="{{asset('main/assets/img/icons/money.png')}}" alt="icon"
-                                    height="37" data-zanim-xs='{"delay":0}' /></div>
+                            <div class="overflow-hidden"><img src="{{ asset('main/assets/img/icons/money.png') }}"
+                                    alt="icon" height="37" data-zanim-xs='{"delay":0}' /></div>
                             <div class="overflow-hidden">
                                 <h5 class="mt-3" data-zanim-xs='{"delay":0.1}'>Strategic Approach</h5>
                             </div>
@@ -479,8 +481,9 @@
                     </div>
                     <div class="col-md-6 col-lg-4 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                         <div class="px-3 py-4 px-lg-4">
-                            <div class="overflow-hidden"><img src="{{asset('main/assets/img/icons/data-analytics.png')}}"
-                                    alt="icon" height="37" data-zanim-xs='{"delay":0}' /></div>
+                            <div class="overflow-hidden"><img
+                                    src="{{ asset('main/assets/img/icons/data-analytics.png') }}" alt="icon"
+                                    height="37" data-zanim-xs='{"delay":0}' /></div>
                             <div class="overflow-hidden">
                                 <h5 class="mt-3" data-zanim-xs='{"delay":0.1}'>Logistic Consulting</h5>
                             </div>
@@ -520,12 +523,12 @@
                         <form class="mt-4" method="post">
                             <div class="row">
                                 <div class="col-6"><input class="form-control" type="hidden" name="to"
-                                        value="username@domain.extension" /><input class="form-control"
-                                        type="text" placeholder="Your Name" aria-label="Your Name" /></div>
+                                        value="username@domain.extension" /><input class="form-control" type="text"
+                                        placeholder="Your Name" aria-label="Your Name" /></div>
                                 <div class="col-6"><input class="form-control" type="text"
                                         placeholder="Phone Number" aria-label="Phone Number" /></div>
-                                <div class="col-6 mt-4"><input class="form-control" type="text"
-                                        placeholder="Subject" aria-label="Subject" /></div>
+                                <div class="col-6 mt-4"><input class="form-control" type="text" placeholder="Subject"
+                                        aria-label="Subject" /></div>
                                 <div class="col-6 mt-4"><button class="btn btn-warning w-100"
                                         type="submit">Submit</button></div>
                             </div>
@@ -550,8 +553,8 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-6 col-lg-4    ">
-                        <div class="card h-100"><img class="card-img-top" src="{{asset('main/assets/img/portrait-3.jpg')}}"
-                                alt="Reenal Scott" />
+                        <div class="card h-100"><img class="card-img-top"
+                                src="{{ asset('main/assets/img/portrait-3.jpg') }}" alt="Reenal Scott" />
                             <div class="card-body" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                                 <div class="overflow-hidden">
                                     <h5 data-zanim-xs='{"delay":0}'>Reenal Scott</h5>
@@ -569,8 +572,8 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-4 mt-4 mt-sm-0  ">
-                        <div class="card h-100"><img class="card-img-top" src="{{asset('main/assets/img/portrait-4.jpg')}}"
-                                alt="Lily Anderson" />
+                        <div class="card h-100"><img class="card-img-top"
+                                src="{{ asset('main/assets/img/portrait-4.jpg') }}" alt="Lily Anderson" />
                             <div class="card-body" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                                 <div class="overflow-hidden">
                                     <h5 data-zanim-xs='{"delay":0}'>Lily Anderson</h5>
@@ -588,8 +591,8 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-4 mt-4  mt-lg-0 ">
-                        <div class="card h-100"><img class="card-img-top" src="{{asset('main/assets/img/portrait-5.jpg')}}"
-                                alt="Thomas Anderson" />
+                        <div class="card h-100"><img class="card-img-top"
+                                src="{{ asset('main/assets/img/portrait-5.jpg') }}" alt="Thomas Anderson" />
                             <div class="card-body" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                                 <div class="overflow-hidden">
                                     <h5 data-zanim-xs='{"delay":0}'>Thomas Anderson</h5>
@@ -606,8 +609,8 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-4 mt-4   ">
-                        <div class="card h-100"><img class="card-img-top" src="{{asset('main/assets/img/portrait-6.jpg')}}"
-                                alt="Legartha Mantana" />
+                        <div class="card h-100"><img class="card-img-top"
+                                src="{{ asset('main/assets/img/portrait-6.jpg') }}" alt="Legartha Mantana" />
                             <div class="card-body" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                                 <div class="overflow-hidden">
                                     <h5 data-zanim-xs='{"delay":0}'>Legartha Mantana</h5>
@@ -624,8 +627,8 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-4 mt-4   ">
-                        <div class="card h-100"><img class="card-img-top" src="{{asset('main/assets/img/portrait-7.jpg')}}"
-                                alt="John Snow" />
+                        <div class="card h-100"><img class="card-img-top"
+                                src="{{ asset('main/assets/img/portrait-7.jpg') }}" alt="John Snow" />
                             <div class="card-body" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                                 <div class="overflow-hidden">
                                     <h5 data-zanim-xs='{"delay":0}'>John Snow</h5>
@@ -641,8 +644,8 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-4 mt-4   ">
-                        <div class="card h-100"><img class="card-img-top" src="{{asset('main/assets/img/portrait-1.jpg')}}"
-                                alt="Ragner Lothbrok" />
+                        <div class="card h-100"><img class="card-img-top"
+                                src="{{ asset('main/assets/img/portrait-1.jpg') }}" alt="Ragner Lothbrok" />
                             <div class="card-body" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                                 <div class="overflow-hidden">
                                     <h5 data-zanim-xs='{"delay":0}'>Ragner Lothbrok</h5>
@@ -669,18 +672,18 @@
         <!-- ============================================-->
         <!-- <section> begin ============================-->
         <section>
-            <div class="bg-holder overlay overlay-elixir" style="background-image:url({{asset('main/assets/img/background-15.jpg')}});">
+            <div class="bg-holder overlay overlay-elixir"
+                style="background-image:url({{ asset('main/assets/img/background-15.jpg') }});">
             </div>
             <!--/.bg-holder-->
             <div class="container">
-                <div class="d-flex"><span class="me-3"> <img src="{{asset('main/assets/img/checkmark.png')}}" alt="checkmark"
-                            style="width: 55px" /></span>
+                <div class="d-flex"><span class="me-3"> <img src="{{ asset('main/assets/img/checkmark.png') }}"
+                            alt="checkmark" style="width: 55px" /></span>
                     <div class="flex-1">
                         <h2 class="text-warning fs-3 fs-lg-4">Take the right step,<br /><span class="text-white">do
                                 the big things.</span></h2>
                         <div class="row mt-4 pe-lg-10">
-                            <div class="overflow-hidden col-md-3" data-zanim-timeline="{}"
-                                data-zanim-trigger="scroll">
+                            <div class="overflow-hidden col-md-3" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                                 <div class="fs-3 fs-lg-4 mb-0 fw-bold text-white mt-lg-5 mt-3 lh-xs"
                                     data-zanim-xs='{"delay":0.1}' data-countup='{"endValue":52}'>52</div>
                                 <h6 class="fs-0 text-white" data-zanim-xs='{"delay":0.2}'>Cases Solved</h6>
@@ -692,8 +695,7 @@
                                 <h6 class="fs-0 text-white" data-zanim-xs='{"delay":0.2}'>Trained Experts</h6>
                             </div>
                             <div class="w-100 d-flex d-lg-none"></div>
-                            <div class="overflow-hidden col-md-3" data-zanim-timeline="{}"
-                                data-zanim-trigger="scroll">
+                            <div class="overflow-hidden col-md-3" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                                 <div class="fs-3 fs-lg-4 mb-0 fw-bold text-white mt-lg-5 mt-3 lh-xs"
                                     data-zanim-xs='{"delay":0.1}' data-countup='{"endValue":38}'>38</div>
                                 <h6 class="fs-0 text-white" data-zanim-xs='{"delay":0.2}'>Branches</h6>
@@ -717,13 +719,12 @@
         <!-- <section> begin ============================-->
         <section class="bg-white">
             <div class="container">
-                <div class="swiper theme-slider"
-                    data-swiper='{"loop":true,"slidesPerView":1,"autoplay":{"delay":5000}}'>
+                <div class="swiper theme-slider" data-swiper='{"loop":true,"slidesPerView":1,"autoplay":{"delay":5000}}'>
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="row px-lg-8">
                                 <div class="col-4 col-md-3 mx-auto"><img class="rounded-3 mx-auto img-fluid"
-                                        src="{{asset('main/assets/img/client1.png')}}" alt="Member" /></div>
+                                        src="{{ asset('main/assets/img/client1.png') }}" alt="Member" /></div>
                                 <div class="col-md-9 mt-4 mt-md-0 px-4 px-sm-3">
                                     <p class="lead">Their work on our website and Internet marketing has made a
                                         significant different to our business. We’ve seen a 425% increase in quote
@@ -737,7 +738,7 @@
                         <div class="swiper-slide">
                             <div class="row px-lg-8">
                                 <div class="col-4 col-md-3 mx-auto"><img class="rounded-3 mx-auto img-fluid"
-                                        src="{{asset('main/assets/img/client2.png')}}" alt="Member" /></div>
+                                        src="{{ asset('main/assets/img/client2.png') }}" alt="Member" /></div>
                                 <div class="col-md-9 mt-4 mt-md-0 px-4 px-sm-3">
                                     <p class="lead">Writing case studies was a daunting task for us. We didn’t know
                                         where to begin or what questions to ask, and clients never seemed to follow
@@ -751,7 +752,7 @@
                         <div class="swiper-slide">
                             <div class="row px-lg-8">
                                 <div class="col-4 col-md-3 mx-auto"><img class="rounded-3 mx-auto img-fluid"
-                                        src="{{asset('main/assets/img/client3.png')}}" alt="Member" /></div>
+                                        src="{{ asset('main/assets/img/client3.png') }}" alt="Member" /></div>
                                 <div class="col-md-9 mt-4 mt-md-0 px-4 px-sm-3">
                                     <p class="lead">As a sales gamification company, we were skeptical to work with a
                                         consultant to optimize our sales emails, but Elixir was highly recommended by
@@ -778,17 +779,23 @@
             <div class="container">
                 <div class="row align-items-center" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                     <div class="col-4 col-md-2 my-3 overflow-hidden"><img class="img-fluid"
-                            src="{{asset('main/assets/img/partner/logo2.png')}}" alt="partnerco" data-zanim-xs="{}" /></div>
+                            src="{{ asset('main/assets/img/partner/logo2.png') }}" alt="partnerco" data-zanim-xs="{}" />
+                    </div>
                     <div class="col-4 col-md-2 my-3 overflow-hidden"><img class="img-fluid"
-                            src="{{asset('main/assets/img/partner/logo1.png')}}" alt="tvc" data-zanim-xs="{}" /></div>
+                            src="{{ asset('main/assets/img/partner/logo1.png') }}" alt="tvc" data-zanim-xs="{}" />
+                    </div>
                     <div class="col-4 col-md-2 my-3 overflow-hidden"><img class="img-fluid"
-                            src="{{asset('main/assets/img/partner/logo6.png')}}" alt="arcade" data-zanim-xs="{}" /></div>
+                            src="{{ asset('main/assets/img/partner/logo6.png') }}" alt="arcade" data-zanim-xs="{}" />
+                    </div>
                     <div class="col-4 col-md-2 my-3 overflow-hidden"><img class="img-fluid"
-                            src="{{asset('main/assets/img/partner/logo3.png')}}" alt="bearbrand" data-zanim-xs="{}" /></div>
+                            src="{{ asset('main/assets/img/partner/logo3.png') }}" alt="bearbrand" data-zanim-xs="{}" />
+                    </div>
                     <div class="col-4 col-md-2 my-3 overflow-hidden"><img class="img-fluid"
-                            src="{{asset('main/assets/img/partner/logo5.png')}}" alt="fast brothers" data-zanim-xs="{}" /></div>
+                            src="{{ asset('main/assets/img/partner/logo5.png') }}" alt="fast brothers"
+                            data-zanim-xs="{}" /></div>
                     <div class="col-4 col-md-2 my-3 overflow-hidden"><img class="img-fluid"
-                            src="{{asset('main/assets/img/partner/logo4.png')}}" alt="harculis beards" data-zanim-xs="{}" /></div>
+                            src="{{ asset('main/assets/img/partner/logo4.png') }}" alt="harculis beards"
+                            data-zanim-xs="{}" /></div>
                 </div>
             </div>
         </div>
@@ -806,7 +813,7 @@
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-4">
                         <div class="card"><a href="news/news.html"><img class="card-img-top"
-                                    src="{{asset('main/assets/img/9.jpg')}}" alt="Featured Image" /></a>
+                                    src="{{ asset('main/assets/img/9.jpg') }}" alt="Featured Image" /></a>
                             <div class="card-body" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                                 <div class="overflow-hidden"><a href="news/news.html">
                                         <h5 data-zanim-xs='{"delay":0}'>Tax impacts of lease mean accounting change
@@ -832,7 +839,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="card"><a href="news/news.html"><img class="card-img-top"
-                                    src="{{asset('main/assets/img/10.jpg')}}" alt="Featured Image" /></a>
+                                    src="{{ asset('main/assets/img/10.jpg') }}" alt="Featured Image" /></a>
                             <div class="card-body" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                                 <div class="overflow-hidden"><a href="news/news.html">
                                         <h5 data-zanim-xs='{"delay":0}'>What brexit means for data protection law</h5>
@@ -857,7 +864,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="card"><a href="news/news.html"><img class="card-img-top"
-                                    src="{{asset('main/assets/img/11.jpg')}}" alt="Featured Image" /></a>
+                                    src="{{ asset('main/assets/img/11.jpg') }}" alt="Featured Image" /></a>
                             <div class="card-body" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                                 <div class="overflow-hidden"><a href="news/news.html">
                                         <h5 data-zanim-xs='{"delay":0}'>The growing meanace of social engineering fraud
@@ -892,31 +899,5 @@
 
 
 
-    <!--===============================================-->
-    <!--    Footer-->
-    <!--===============================================-->
 
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-    <section style="background-color: #055e03">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="bg-primary text-white p-5 p-lg-6 rounded-3">
-                        <h4 class="text-white fs-1 fs-lg-2 mb-1">Sign up for email alerts</h4>
-                        <p class="text-white">Stay current with our latest insights</p>
-                        <form class="mt-4">
-                            <div class="row align-items-center">
-                                <div class="col-md-7 pe-md-0">
-                                    <div class="input-group"><input class="form-control" type="email"
-                                            placeholder="Enter Email Here" /></div>
-                                </div>
-                                <div class="col-md-5 mt-3 mt-md-0">
-                                    <div class="d-grid"><button class="btn btn-warning" type="submit"><span
-                                                class="text-primary fw-semi-bold">Submit</span></button></div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-   @endsection            
+@endsection
