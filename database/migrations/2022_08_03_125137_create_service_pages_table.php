@@ -16,15 +16,15 @@ return new class extends Migration
         Schema::create('service_pages', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('menu_id');
-            $table->string('page-slug',255);
-            $table->text('meta-title');
-            $table->text('meta-keyword');
-            $table->text('meta-description');
-            $table->text('page-name');
-            $table->text ('banner-image');
-            // $table->text('page-heading');
-            // $table->text('page-sub-heading');
-            $table->text('page-data');
+            $table->string('page_slug',255);
+            $table->text('meta_title');
+            $table->text('meta_keyword');
+            $table->text('meta_description');
+            $table->text('page_name');
+            $table->text ('banner_image');
+            // $table->text('page_heading');
+            // $table->text('page_sub-heading');
+            $table->text('page_data');
             $table->enum('status',['0','1'])->default('1')->comment('0=Inactive, 1=Active');
             $table->softDeletes();
             $table->timestamps();

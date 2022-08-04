@@ -40,7 +40,7 @@
                                         <div class="form-group">
                                             <label for="menu_name">
                                                 Menu Name</label>
-                                            <input type="text" name="menu_name" class="form-control" id="menu_name"
+                                            <input type="text" name="menu_name" class="form-control" id="menu_name" required
                                                 placeholder="Enter ...">
                                         </div>
 
@@ -49,7 +49,7 @@
 
                                         <div class="form-group">
                                             <label for="link">Menu Url</label>
-                                            <input type="text" class="form-control" name="link" id="link"
+                                            <input type="text" class="form-control" name="link" id="link" 
                                                 placeholder="Enter ...">
                                         </div>
 

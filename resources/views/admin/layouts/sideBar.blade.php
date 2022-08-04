@@ -62,7 +62,7 @@
         <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
-</aside>
+
                   <li class="nav-item menu-open">
                       <a href="{{ url('/dashboard') }}"
                           class="nav-link {{ request()->is('dashboard') ? 'active' : '' }}">
