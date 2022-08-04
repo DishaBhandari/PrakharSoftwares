@@ -13,10 +13,6 @@ class ServiceController extends Controller
 {
     public function  header($parent_id)
     {
-<<<<<<< HEAD
-        $data = menuBar::where('menu_name', 'Services')->orWhere(' ',3)->get();
-        return view('admin.addService', compact('data'));
-=======
         $menu = "";
         $res = menuBar::where('parent_id', $parent_id)->orderBy('sort', 'ASC')->get();
         foreach ($res as $menuitem) {
@@ -51,7 +47,6 @@ class ServiceController extends Controller
             return redirect()->route('addnav')->with('alert-error','Please create menu first!');
         }
       
->>>>>>> 4c7d07bb120353f0759240713aa92fa2125bee2c
     }
     // summer note add image 
     public function create(Request $request)
