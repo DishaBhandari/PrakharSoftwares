@@ -55,7 +55,7 @@
                       </a>
                   </li>
                   <li>
-                      <a href="{{ url('/allnav') }}" class="nav-link {{ request()->is('allnav') ? 'active' : '' }}">
+                      <a href="{{ url('/allnav') }}" class="nav-link {{ request()->is('allnav')|| request()->is('edit/nav/*') ? 'active' : '' }}">
                           <i class="nav-icon fas fa-tachometer-alt"></i>
                           <p>
                               All Nav

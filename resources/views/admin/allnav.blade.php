@@ -55,9 +55,9 @@
                                     </td>
                                     <td>{{ $item->sort }}</td>
                                     <td> <a onclick="return confirm('Are you sure?')"
-                                        href="../delete/nav/{{ $item->menu_id }}" class="btn btn-danger"><i
-                                            class="fa-solid fa-trash"></i></a>
-                                        <a href="../edit/page/{{ $item->url }}" class="btn btn-success bg-black"><i
+                                            href="../delete/nav/{{ $item->menu_id }}" class="btn btn-danger"><i
+                                                class="fa-solid fa-trash"></i></a>
+                                        <a href="../edit/nav/{{ $item->menu_id }}" class="btn btn-success bg-black"><i
                                                 class="fa-solid fa-pen"></i></a>
                                     </td>
                                 </tr>
