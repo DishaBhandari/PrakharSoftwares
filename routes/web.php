@@ -25,6 +25,8 @@ Route::middleware([
         return view('admin.index');
     })->name('dashboard');
     Route::get('/addnav',[HomeControllers::class,'nav'])->name('addnav');
+    Route::get('/allnav',[HomeControllers::class,'allnav'])->name('allnav');
+    Route::get('/delete/nav/{id}',[HomeControllers::class,'delete'])->name('allnav');
     Route::post('/addnavform',[HomeControllers::class,'addnavform'])->name('addnavform');
 
     Route::get('/addService',[ServiceController::class,'addService'])->name('addService');
