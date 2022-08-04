@@ -42,7 +42,7 @@
                                             <select name="sub_menu" class="form-control" required>
                                                 <option value="0">None</option>
                                                 @foreach ($data as $item)
-                                                    <option value="{{$item->menu_id}}">{{$item->menu_name}}</option>
+                                                    <option value="{{ $item->menu_id }}">{{ $item->menu_name }}</option>
                                                 @endforeach
 
                                             </select>
@@ -127,6 +127,8 @@
 
 @endsection
 @section('scripts')
+  
+
     <script>
         $('.summernote').summernote({
             toolbar: [

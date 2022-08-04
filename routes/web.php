@@ -36,7 +36,6 @@ Route::middleware([
     Route::get('/allnav',[HomeControllers::class,'allnav'])->name('allnav');
     Route::get('/delete/nav/{id}',[HomeControllers::class,'delete'])->name('allnav');
     Route::post('/addnavform',[HomeControllers::class,'addnavform'])->name('addnavform');
-
     Route::get('/addService',[ServiceController::class,'addService'])->name('addService');
     Route::post('/addServiceForm',[ServiceController::class,'postService'])->name('postAddService');
     Route::post('/services/saveimage',[ServiceController::class,'create']);
