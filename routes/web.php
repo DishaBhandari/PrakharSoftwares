@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeControllers;
+use App\Http\Controllers\loadPage;
 use App\Http\Controllers\Admin\ServiceController;
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,7 @@ use App\Http\Controllers\Admin\ServiceController;
 */
 
 Route::get('/', [HomeControllers::class, 'index']);
+Route::get('/about', [loadPage::class, 'about']);
 
 Route::middleware([
     'auth:sanctum',
@@ -24,6 +26,12 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('admin.index');
     })->name('dashboard');
+    Route::get('/addnav', [HomeControllers::class, 'nav'])->name('addnav');
+    Route::get('/allnav', [HomeControllers::class, 'allnav'])->name('allnav');
+    Route::get('/delete/nav/{id}', [HomeControllers::class, 'delete']);
+    Route::get('/edit/nav/{id}', [HomeControllers::class, 'edit']);
+    Route::POST('/update/nav', [HomeControllers::class, 'update'])->name('update');
+    Route::post('/addnavform', [HomeControllers::class, 'addnavform'])->name('addnavform');
     Route::get('/addnav',[HomeControllers::class,'nav'])->name('addnav');
     Route::get('/allnav',[HomeControllers::class,'allnav'])->name('allnav');
     Route::get('/delete/nav/{id}',[HomeControllers::class,'delete'])->name('allnav');
