@@ -98,5 +98,20 @@
 <script src="{{ asset('main/vendors/gsap/customEase.js') }}"></script>
 <script src="{{ asset('main/assets/js/theme.js') }}"></script>
 <!-- Mirrored from prium.github.io/elixir/v3.0.0/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Aug 2022 04:29:09 GMT -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    $('.costum').mouseover(function(e) {
+        e.preventDefault();
+        $(this).children("ul").addClass("show");
+
+        $(this).click(function(e) {
+            $(this).children("ul").toggleClass("show");
+        })
+    })
+    $('.costum').mouseout(function(e) {
+        $(this).children("ul").removeClass("show");
+    })
+</script>
 
 </html>

@@ -14,8 +14,8 @@ class HomeControllers extends Controller
         $res = menuBar::where('parent_id', $parent_id)->orderBy('sort', 'ASC')->get();
         foreach ($res as $menuitem) {
             $menu .= "
-            <li " . ($menuitem->submenu_count > 0 || $menuitem->parent_id == '0' ? "class='nav-item dropdown'" : "") . ">
-            <a href='" . url($menuitem->link) . "' " . ($menuitem->submenu_count > 0 ? "class='nav-link dropdown-toggle dropdown-indicator'  role='button' data-bs-toggle='dropdown' aria-expanded='false'" : ($menuitem->parent_id == 0 ? "class='nav-link' role='button'" : "class='dropdown-item'")) . ">
+            <li " . ($menuitem->submenu_count > 0 ? "class='nav-item dropdown costum'" : ($menuitem->parent_id == 0 ? "class='nav-item dropdown'" : "")) . ">
+            <a href='" . ($menuitem->submenu_count > 0 ? "javascript:void(0)":url($menuitem->link) ). "' " . ($menuitem->submenu_count > 0 ? "class='nav-link  dropdown-indicator '  role='button' aria-expanded='false'" : ($menuitem->parent_id == 0 ? "class='nav-link' role='button'" : "class='dropdown-item'")) . ">
              " . $menuitem->menu_name .
                 "
                 </a>";
