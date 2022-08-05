@@ -65,6 +65,20 @@ class HomeControllers extends Controller
             'link' => 'required',
             'sort' => 'required'
         ]);
+        if ($data['parent_id'] == 0) {
+            $data['main_id'] = 0;
+            echo 'hello';
+        } else {
+            $id = menuBar::where('menu_id', $data['parent_id'])->get();
+            // print_r($id);
+            foreach ($id as $i) {
+                if ($i->parent_id == 0) {
+                    $data['main_id'] = $i->menu_id;
+                } else {
+                    $data['main_id'] = $i->main_id;
+                }
+            }
+        }
         menuBar::where('menu_id',  $request->menu_id)->update($data);
         return "Navbar Updated Successfully";
     }
@@ -84,6 +98,21 @@ class HomeControllers extends Controller
             'link' => 'required',
             'sort' => 'required'
         ]);
+        if ($data['parent_id'] == 0) {
+            $data['main_id'] = 0;
+            echo 'hello';
+        } else {
+            $id = menuBar::where('menu_id', $data['parent_id'])->get();
+            // print_r($id);
+            foreach ($id as $i) {
+                if ($i->parent_id == 0) {
+                    $data['main_id'] = $i->menu_id;
+                } else {
+                    $data['main_id'] = $i->main_id;
+                }
+            }
+        }
+
         menuBar::create($data);
         return "Nav Bar Added Successfully";
     }

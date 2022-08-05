@@ -35,6 +35,7 @@
                                 <th scope="col">Parent Name</th>
                                 <th scope="col">Postion</th>
                                 <th scope="col">Type</th>
+                                <th scope="col">Main Menu</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -56,6 +57,13 @@
                                     </td>
                                     <td>{{ $item->sort }}</td>
                                     <td>{{ $item->submenu_count==0?"Link Menu" : "Dropdown Menu"}}</td>
+                                    <td>
+                                        @foreach ($data as $item2)
+                                            @if ($item->main_id == $item2->menu_id)
+                                                {{ $item2->menu_name }}
+                                            @endif
+                                        @endforeach
+                                    </td>
                                     <td> <a onclick="return confirm('Are you sure?')"
                                             href="../delete/nav/{{ $item->menu_id }}" class="btn btn-danger"><i
                                                 class="fa-solid fa-trash"></i></a>

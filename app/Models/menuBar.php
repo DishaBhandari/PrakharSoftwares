@@ -13,6 +13,7 @@ class menuBar extends Model
         'menu_name',
         'link',
         'submenu_count',
-        'parent_id'
+        'parent_id',
+        'main_id'
     ];
 }
