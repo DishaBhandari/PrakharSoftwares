@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('service_pages', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('menu_id');
-            $table->string('page_slug',255);
             $table->text('meta_title');
             $table->text('meta_keyword');
             $table->text('meta_description');

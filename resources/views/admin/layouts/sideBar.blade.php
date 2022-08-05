@@ -62,6 +62,12 @@
                             Add Service
                         </p>
                     </a>
+                    <a href="{{ url('/allService') }}" class="nav-link {{ request()->is('allService') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            All Services
+                        </p>
+                    </a>
                 </li>
             </ul>
         </nav>
