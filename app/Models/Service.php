@@ -9,4 +9,8 @@ class Service extends Model
 {
     use HasFactory;
     protected $table = 'service_pages';
+
+    function getMenu(){
+        return $this->hasOne(menuBar::class, 'menu_id', 'menu_id');
+    }
 }

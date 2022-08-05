@@ -39,32 +39,11 @@
                                         <div class="form-group">
                                             <label for="menu_name">
                                                 Sub Menu Name</label>
-                                            <select name="menu_id" class="form-control" required>
+                                            <select name="menu_name" class="form-control" required>
                                                 @php
                                                     echo $data;
                                                 @endphp
                                             </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                            <label for="link">Menu Url</label>
-                                            <input type="text" class="form-control" name="page_slug" id="slug"
-                                                required placeholder="Enter Url ">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                            <label for="menu_name">Page Name</label>
-                                            <input type="text" class="form-control" name="menu_name" id="menu_name"
-                                                required placeholder="Enter Meta Title ">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                            <label for="sort">Page Sort</label>
-                                            <input type="number" class="form-control" name="sort" id="sort"
-                                                required placeholder="Enter Meta Title ">
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
