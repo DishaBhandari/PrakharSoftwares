@@ -15,7 +15,7 @@ use App\Http\Controllers\Admin\ServiceController;
 |
 */
 
-Route::get('/', [HomeControllers::class, 'index']);
+Route::get('/{}', [HomeControllers::class, 'index']);
 Route::get('/about', [loadPage::class, 'about']);
 
 Route::middleware([
