@@ -26,7 +26,7 @@
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
-                    <table class="table table-striped table-hover table-success bg-success">
+                    <table class="table  table-hover  bg-success">
                         <thead style="background-color: rgb(13, 66, 13)">
                             <tr>
                                 <th scope="col">#</th>
@@ -34,6 +34,7 @@
                                 <th scope="col">Menu Link</th>
                                 <th scope="col">Parent Name</th>
                                 <th scope="col">Postion</th>
+                                <th scope="col">Type</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -54,6 +55,7 @@
                                         @endforeach
                                     </td>
                                     <td>{{ $item->sort }}</td>
+                                    <td>{{ $item->submenu_count==0?"Link Menu" : "Dropdown Menu"}}</td>
                                     <td> <a onclick="return confirm('Are you sure?')"
                                             href="../delete/nav/{{ $item->menu_id }}" class="btn btn-danger"><i
                                                 class="fa-solid fa-trash"></i></a>

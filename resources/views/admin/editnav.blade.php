@@ -48,7 +48,7 @@
                                             </div>
 
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-6" id="linkdiv">
 
                                             <div class="form-group">
                                                 <label for="link">Menu Url</label>
@@ -59,7 +59,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-4">
 
                                             <div class="form-group">
                                                 <label for="parent_id" id="parent_id">Add Under Menu</label>
@@ -75,7 +75,22 @@
                                             </div>
 
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-4">
+
+                                            <div class="form-group">
+                                                <label for="submenu_count">Menu Type</label>
+                                                <select name="submenu_count" id="submenu_count" class="form-control">
+                                                    <option value="0"
+                                                        {{ $item->submenu_count == 0 ? 'Selected' : '' }}>
+                                                        Link Menu</option>
+                                                    <option value="1"
+                                                        {{ $item->submenu_count == 1 ? 'Selected' : '' }}>
+                                                        Dropdown menu</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-sm-4">
 
                                             <div class="form-group">
                                                 <label for="sort">
@@ -116,6 +131,18 @@
 @endsection
 @section('scripts')
     <script>
+        $('#submenu_count').change(function() {
+            let valu = $(this).val();
+
+            if (valu == 1) {
+                // $('#link').reset();
+                $('#link').val('javascript:void(0)');
+                $('#linkdiv').hide();
+            } else {
+                $('#link').val('');
+                $('#linkdiv').show();
+            }
+        })
         $('#addnavform').submit(function(e) {
             e.preventDefault();
             data = new FormData(this);
@@ -148,6 +175,11 @@
                 }
             });
         })
+        @foreach ($data as $item)
+            if ({{ $item->submenu_count == 1 ? true : 0 }}>0) {
+                $('#linkdiv').hide();
+            };
+        @endforeach
     </script>
     </body>
 

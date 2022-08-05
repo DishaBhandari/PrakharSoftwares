@@ -26,14 +26,14 @@
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
-                    @if(Session::has('alert-error'))
-                    <div class="col-sm-11 mx-auto alert alert-danger ">{{ (Session::get('alert-error')) }}</div>
-                    @endif                    
+                    @if (Session::has('alert-error'))
+                        <div class="col-sm-11 mx-auto alert alert-danger ">{{ Session::get('alert-error') }}</div>
+                    @endif
                     <div class="card card-warning col-11 m-auto">
                         <div class="card-header">
                             <h3 class="card-title">General Elements</h3>
                         </div>
-                       
+
                         <div class="card-body">
                             <form method="POST" id="addnavform">
                                 @csrf
@@ -43,23 +43,23 @@
                                         <div class="form-group">
                                             <label for="menu_name">
                                                 Menu Name</label>
-                                            <input type="text" name="menu_name" class="form-control" id="menu_name" required
-                                                placeholder="Enter ...">
+                                            <input type="text" name="menu_name" class="form-control" id="menu_name"
+                                                required placeholder="Enter ...">
                                         </div>
 
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6" id="linkdiv">
 
                                         <div class="form-group">
                                             <label for="link">Menu Url</label>
-                                            <input type="text" class="form-control" name="link" id="link" 
+                                            <input type="text" class="form-control" name="link" id="link"
                                                 placeholder="Enter ...">
                                         </div>
 
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
 
                                         <div class="form-group">
                                             <label for="parent_id" id="parent_id">Add Under Menu</label>
@@ -73,7 +73,18 @@
                                         </div>
 
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
+
+                                        <div class="form-group">
+                                            <label for="submenu_count">Menu Type</label>
+                                            <select name="submenu_count" id="submenu_count" class="form-control">
+                                                <option value="0">Link Menu</option>
+                                                <option value="1">Dropdown menu</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-4">
 
                                         <div class="form-group">
                                             <label for="sort">
@@ -113,6 +124,18 @@
 @endsection
 @section('scripts')
     <script>
+        $('#submenu_count').change(function() {
+            let valu = $(this).val();
+
+            if (valu == 1) {
+                // $('#link').reset();
+                $('#link').val('javascript:void(0)');
+                $('#linkdiv').hide();
+            } else {
+                $('#link').val('');
+                $('#linkdiv').show();
+            }
+        })
         $('#addnavform').submit(function(e) {
             e.preventDefault();
             data = new FormData(this);

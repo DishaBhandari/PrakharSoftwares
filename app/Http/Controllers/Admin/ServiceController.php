@@ -14,7 +14,7 @@ class ServiceController extends Controller
     public function  header($parent_id)
     {
         $menu = "";
-        $res = menuBar::where('parent_id', $parent_id)->orderBy('sort', 'ASC')->get();
+        $res = menuBar::where('parent_id', $parent_id)->where('submenu_count', 0)->orderBy('sort', 'ASC')->get();
         foreach ($res as $menuitem) {
             $menu .= "<option value='" . $menuitem->menu_id .
                 "'>" . $menuitem->menu_name .
@@ -33,9 +33,9 @@ class ServiceController extends Controller
     public function addService()
     {
         $data = $this->header(3);
-        $id = menuBar::where('menu_name', 'Services')->get();
+        // $id = menuBar::where('menu_name', 'Services')->get();
 
-        return view('admin.addService', compact('data', 'id'));
+        return view('admin.addService', compact('data'));
     }
     // summer note add image 
     public function create(Request $request)

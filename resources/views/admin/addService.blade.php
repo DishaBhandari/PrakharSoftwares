@@ -40,10 +40,6 @@
                                             <label for="menu_name">
                                                 Sub Menu Name</label>
                                             <select name="menu_id" class="form-control" required>
-                                                <option value="0">None</option>
-                                                @foreach ($id as $item)
-                                                    <option value="{{ $item->menu_id }}">{{ $item->menu_name }}</option>
-                                                @endforeach
                                                 @php
                                                     echo $data;
                                                 @endphp

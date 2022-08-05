@@ -16,7 +16,7 @@ class HomeControllers extends Controller
         foreach ($res as $menuitem) {
             $menu .= "
             <li " . ($menuitem->submenu_count > 0 ? "class='nav-item dropdown costum'" : ($menuitem->parent_id == 0 ? "class='nav-item dropdown'" : "")) . ">
-            <a href='" . ($menuitem->submenu_count > 0 ? "javascript:void(0)":url($menuitem->link) ). "' " . ($menuitem->submenu_count > 0 ? "class='nav-link  dropdown-indicator '  role='button' aria-expanded='false'" : ($menuitem->parent_id == 0 ? "class='nav-link' role='button'" : "class='dropdown-item'")) . ">
+            <a href='" . ($menuitem->submenu_count > 0 ? "javascript:void(0)" : url($menuitem->link)) . "' " . ($menuitem->submenu_count > 0 ? "class='nav-link  dropdown-indicator '  role='button' aria-expanded='false'" : ($menuitem->parent_id == 0 ? "class='nav-link' role='button'" : "class='dropdown-item'")) . ">
              " . $menuitem->menu_name .
                 "
                 </a>";
@@ -34,18 +34,13 @@ class HomeControllers extends Controller
     // home page loading function 
     public function index()
     {
-        $nav2 = menuBar::get();
-        foreach ($nav2 as $n) {
-            $n2 = menuBar::where('parent_id', $n->menu_id)->get();
-            menuBar::where('menu_id', $n->menu_id)->update(['submenu_count' => count($n2)]);
-        }
         $nav = $this->header(0);
         return view('main.index', compact('nav'));
     }
     // admin nav add nav function 
     public function nav()
     {
-        $data = menuBar::get();
+        $data = menuBar::where('submenu_count', 1)->get();
         return view('admin.addNav', compact('data'));
     }
     // all nav loading function in admin 
@@ -58,7 +53,7 @@ class HomeControllers extends Controller
     public function edit($id)
     {
         $data = menuBar::where('menu_id', $id)->get();
-        $data2 = menuBar::get();
+        $data2 = menuBar::where('submenu_count', 1)->get();
         return view('admin.editnav', compact('data', 'data2'));
     }
     // Update nav bar 
@@ -88,14 +83,6 @@ class HomeControllers extends Controller
             'link' => 'required',
             'sort' => 'required'
         ]);
-        if ($data['parent_id'] > 0) {
-            $count = menuBar::where('parent_id', $data['parent_id'])->get();
-            $count = count($count);
-            $count = $count + 1;
-            menuBar::where("menu_id", $data['parent_id'])->update(['submenu_count' => $count]);
-        }
-
-        $data['submenu_count'] = 0;
         menuBar::create($data);
         return "Nav Bar Added Successfully";
     }
