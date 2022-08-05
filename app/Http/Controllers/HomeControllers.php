@@ -74,6 +74,7 @@ class HomeControllers extends Controller
         menuBar::where('menu_id', $id)->delete();
         return redirect('allnav');
     }
+    // add nav bar method 
     public function addnavform(Request $request)
     {
         $data = $request->all();
