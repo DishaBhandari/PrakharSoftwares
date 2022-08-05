@@ -33,9 +33,9 @@ class ServiceController extends Controller
     public function addService()
     {
         $data = $this->header(3);
-        $id = menuBar::where('menu_name','Services')->get();
+        $id = menuBar::where('menu_name', 'Services')->get();
 
-        return view('admin.addService', compact('data','id'));
+        return view('admin.addService', compact('data', 'id'));
     }
     // summer note add image 
     public function create(Request $request)
@@ -61,20 +61,21 @@ class ServiceController extends Controller
         $image_path = public_path($file);
         unlink($image_path);
     }
-    public function postAddService(Request $req)
+    public function postService(Request $req)
     {
         $req->validate(
             [
-                'sub_menu' => 'required|unique:menu_bars',
-                // 'slug' => 'required',
+                'menu_id' => 'required',
+                'page_slug' => 'required',
+                'menu_name' => 'required|unique:menu_bars',
                 'meta_title' => 'required',
                 'meta_keyword' => 'required',
                 'meta_description' => 'required',
                 'page_name' => 'required',
-                'banner' => 'required|image|mimes:jpeg,png,jpg|max:5120|dimensions:ratio=3/2',
+                'banner' => 'required|image|mimes:jpeg,png,jpg|max:5120',
                 'content' => 'required',
             ],
-            message: [
+            [
                 "banner.mimes" => [
                     "Only JPG, JPEG and PNG Image allowed."
                 ],
@@ -86,27 +87,35 @@ class ServiceController extends Controller
                 ]
             ]
         );
-
-        $data = Service::where('menu_id', $req->sub_menu)->count();
-        if ($data = 0) {
+        $data2 = [];
+        $data2['menu_name'] = $req->menu_name;
+        $data2['sort'] = $req->sort;
+        $data2['parent_id'] = $req->menu_id;
+        $data2['link'] = $req->page_slug;
+        $data2['submenu_count'] = 0;
+        $data3 = menuBar::where('parent_id', $req->menu_id)->count() + 1;
+        menuBar::where('menu_id', $req->menu_id)->update(['submenu_count' => $data3]);
+        menuBar::create($data2);
+        $data = Service::where('menu_id', $req->menu_id)->where('page_slug', $req->page_slug)->count();
+        if ($data == 0) {
 
             $path = public_path('main-documents/service');
             if (!file_exists($path)) {
                 mkdir($path, 0777, true);
             }
             $file = $req->file('banner');
-            $fileName =  $req->slug . '.' . $file->getClientOriginalExtension();
+            $fileName =  $req->page_slug . '.' . $file->getClientOriginalExtension();
             $file->move($path, $fileName);
-
+            unset($req['banner']);
             $service = new Service();
-            $service->menu_id = $req->sub_menu;
-            // $service->page_slug    = $req->sub_menu;
-            $service->meta_title = $req->sub_menu;
-            $service->meta_keyword = $req->sub_menu;
-            $service->meta_description = $req->sub_menu;
-            $service->page_name = $req->sub_menu;
-            $service->banner_image = $req->fileName;
-            $service->page_data = $req->sub_menu;
+            $service->menu_id = $req->menu_id;
+            $service->page_slug    = $req->page_slug;
+            $service->meta_title = $req->meta_title;
+            $service->meta_keyword = $req->meta_keyword;
+            $service->meta_description = $req->meta_description;
+            $service->page_name = $req->page_name;
+            $service->banner_image = $fileName;
+            $service->page_data = $req->content;
             $service->save();
 
             return ('Page has been added for this sub-menu!');

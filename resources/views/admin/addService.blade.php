@@ -32,31 +32,45 @@
                         </div>
 
                         <div class="card-body">
-                            <form method="POST" id="addnavform">
+                            <form method="POST" id="addServiceform">
                                 @csrf
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="menu_name">
                                                 Sub Menu Name</label>
-                                            <select name="sub_menu" class="form-control" required>
+                                            <select name="menu_id" class="form-control" required>
                                                 <option value="0">None</option>
                                                 @foreach ($id as $item)
                                                     <option value="{{ $item->menu_id }}">{{ $item->menu_name }}</option>
                                                 @endforeach
-                                                    @php
-                                                        echo $data;
-                                                    @endphp
+                                                @php
+                                                    echo $data;
+                                                @endphp
                                             </select>
                                         </div>
                                     </div>
-                                    {{-- <div class="col-sm-4">
+                                    <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="link">Menu Url</label>
-                                            <input type="text" class="form-control" name="slug" id="slug"
+                                            <input type="text" class="form-control" name="page_slug" id="slug"
                                                 required placeholder="Enter Url ">
                                         </div>
-                                    </div> --}}
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="menu_name">Page Name</label>
+                                            <input type="text" class="form-control" name="menu_name" id="menu_name"
+                                                required placeholder="Enter Meta Title ">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="sort">Page Sort</label>
+                                            <input type="number" class="form-control" name="sort" id="sort"
+                                                required placeholder="Enter Meta Title ">
+                                        </div>
+                                    </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="link">Meta Title</label>
@@ -129,7 +143,7 @@
 
 @endsection
 @section('scripts')
-  
+
 
     <script>
         $('.summernote').summernote({
@@ -207,38 +221,38 @@
             });
         }
 
-        // $('#addServiceSubmit').submit(function(e) {
-        //     e.preventDefault();
-        //     data = new FormData(this);
-        //     $.ajax({
-        //         data: data,
-        //         type: "POST",
-        //         url: "{{ route('addnavform') }}",
-        //         headers: {
-        //             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        //         },
-        //         cache: false,
-        //         contentType: false,
-        //         processData: false,
-        //         error: function(request, status, error) {
-        //             data = $.parseJSON(request.responseText);
-        //             $('#alerterr').text(data.message.split('.')['0']);
-        //             $('#alerterr').fadeIn();
-        //             $('#alerterr').delay(4000).fadeOut();
-        //         },
-        //         success: function(data) {
-        //             $('#addnavform')[0].reset();
-        //             $('#alertsuccess').text(data);
-        //             $('#alertsuccess').fadeIn();
-        //             $('#alertsuccess').delay(4000).fadeOut();
-        //             // console.log(data);
-        //             // setTimeout(() => {
+        $('#addServiceform').submit(function(e) {
+            e.preventDefault();
+            data = new FormData(this);
+            $.ajax({
+                data: data,
+                type: "POST",
+                url: "{{ route('addServiceform') }}",
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                cache: false,
+                contentType: false,
+                processData: false,
+                error: function(request, status, error) {
+                    data = $.parseJSON(request.responseText);
+                    $('#alerterr').text(data.message.split('.')['0']);
+                    $('#alerterr').fadeIn();
+                    $('#alerterr').delay(4000).fadeOut();
+                },
+                success: function(data) {
+                    $('#addServiceform')[0].reset();
+                    $('#alertsuccess').text(data);
+                    $('#alertsuccess').fadeIn();
+                    $('#alertsuccess').delay(700).fadeOut();
+                    // console.log(data);
+                    setTimeout(() => {
 
-        //             //     location.href = "{{ url('/dashboard') }}";
-        //             // }, 4000);
-        //         }
-        //     });
-        // })
+                        location.reload();
+                    }, 1000);
+                }
+            });
+        })
     </script>
     </body>
 
