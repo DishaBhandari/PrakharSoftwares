@@ -18,6 +18,5 @@ use App\Http\Controllers\mainController;
 */
 
 Route::domain('main.in')->group(function () {
-
     Route::get('/{id?}', [mainController::class, 'index']);
 });
