@@ -3,6 +3,7 @@
 
 
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +18,8 @@
     <!--    Favicons-->
     <!-- ===============================================-->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('main/assets/img/favicons/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('main/assets/img/favicons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="{{ asset('main/assets/img/favicons/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16"
         href="{{ asset('main/assets/img/favicons/favicon-16x16.png') }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('main/assets/img/favicons/favicon.ico') }}">
@@ -42,7 +44,7 @@
     <style>
         body,
         a {
-            color: green !important;
+            color: black !important;
         }
 
         body {
@@ -67,7 +69,7 @@
         span,
         .brand-icon,
         .text-primary {
-            color: rgb(10, 119, 10) !important;
+            color: black !important;
         }
 
         .bg-primary {
@@ -86,23 +88,29 @@
         .preloader {
             background-color: rgb(8, 77, 8) !important;
         }
+
+        .navbar-elixir {
+            background: rgb(255 255 255);
+        }
+
+        .navbar-elixir a {
+            font-weight: 900;
+            font-size: 16px !important;
+        }
+
+        .nav-link {
+            padding-right: 15px !important;
+            padding-left: 15px !important;
+        }
+
+        .nav-link a:hover {
+            color: green;
+        }
+
+        .dropdown-indicator:after {
+            right: 0.2rem !important;
+        }
     </style>
 </head>
+
 <body>
-    
-    <div class="bg-primary py-3 d-none d-sm-block text-white fw-bold">
-        <div class="container">
-            <div class="row align-items-center gx-4">
-                <div class="col-auto d-none d-lg-block fs--1"><span class="fas fa-map-marker-alt text-warning me-2"
-                        data-fa-transform="grow-3"></span>1010 Avenue, New York, NY 10018 US. </div>
-                <div class="col-auto ms-md-auto order-md-2 d-none d-sm-flex fs--1 align-items-center"><span
-                        class="fas fa-clock text-warning me-2" data-fa-transform="grow-3"></span>Mon-Sat, 8.00-18.00.
-                    Sunday CLOSED</div>
-                <div class="col-auto"><span class="fas fa-phone-alt text-warning" data-fa-transform="shrink-3"></span><a
-                        class="ms-2 fs--1 d-inline text-white fw-bold" href="tel:2123865575">212 386 5575, 212 386
-                        5576</a></div>
-            </div>
-        </div>
-    </div>
-    <div class="sticky-top navbar-elixir">
-        <div class="container">

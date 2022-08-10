@@ -49,20 +49,30 @@
                                     <td>{{ $item->menu_name }}</td>
                                     <td>{{ $item->link }}</td>
                                     <td>
-                                        @foreach ($data as $item2)
-                                            @if ($item->parent_id == $item2->menu_id)
-                                                {{ $item2->menu_name }}
-                                            @endif
-                                        @endforeach
+                                        @if ($item->parent_id == 0)
+                                            {{ $item->menu_name }}
+                                        @else
+                                            @foreach ($data as $item2)
+                                                @if ($item->parent_id == $item2->menu_id)
+                                                    {{ $item2->menu_name }}
+                                                @endif
+                                            @endforeach
+                                        @endif
+
                                     </td>
                                     <td>{{ $item->sort }}</td>
-                                    <td>{{ $item->submenu_count==0?"Link Menu" : "Dropdown Menu"}}</td>
+                                    <td>{{ $item->submenu_count == 0 ? 'Link Menu' : 'Dropdown Menu' }}</td>
                                     <td>
-                                        @foreach ($data as $item2)
-                                            @if ($item->main_id == $item2->menu_id)
-                                                {{ $item2->menu_name }}
-                                            @endif
-                                        @endforeach
+                                        @if ($item->main_id == 0)
+                                            {{ $item->menu_name }}
+                                        @else
+                                            @foreach ($data as $item2)
+                                                @if ($item->main_id == $item2->menu_id)
+                                                    {{ $item2->menu_name }}
+                                                @endif
+                                            @endforeach
+                                        @endif
+
                                     </td>
                                     <td> <a onclick="return confirm('Are you sure?')"
                                             href="../delete/nav/{{ $item->menu_id }}" class="btn btn-danger"><i
@@ -84,6 +94,6 @@
 
 @endsection
 @section('scripts')
-   
+
 
 @endsection

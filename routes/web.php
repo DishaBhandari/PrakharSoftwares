@@ -1,9 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeControllers;
-use App\Http\Controllers\loadPage;
-use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\mainController;
 
 /*
