@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\SildeUpdate;
 use App\Http\Controllers\loadPage;
 
 use App\Models\menuBar;
@@ -66,7 +66,8 @@ class mainController extends Controller
     public function home()
     {
         $nav = $this->header(0);
-        return view('main.index', compact('nav'));
+        $slide = SildeUpdate::get();
+        return view('main.index', compact('nav','slide'));
     }
 
     // about page loading function 

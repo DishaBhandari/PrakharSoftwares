@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeControllers;
 use App\Http\Controllers\loadPage;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\HomeUpdateContrller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,6 +46,13 @@ Route::domain('admin.in')->group(function () {
         Route::post('/addServiceform', [ServiceController::class, 'postService'])->name('addServiceform');
         Route::post('/services/saveimage', [ServiceController::class, 'create']);
         Route::post('/services/delete', [ServiceController::class, 'delete']);
+        Route::get('allService', [ServiceController::class, 'allService']);
+        Route::get('updatehome', [HomeUpdateContrller::class, 'index']);
+        Route::get('updateslide', [HomeUpdateContrller::class, 'updateslide']);
+        Route::get('addslide', [HomeUpdateContrller::class, 'addslide']);
+        Route::get('editslide/{id}', [HomeUpdateContrller::class, 'editslide']);
+        Route::post('addSlideform', [HomeUpdateContrller::class, 'addSlideform'])->name('addSlideform');
+        Route::post('updateSlideform', [HomeUpdateContrller::class, 'updateSlideform'])->name('updateSlideform');
 
         Route::get('/test', [ServiceController::class, 'index'])->name('addService');
     });

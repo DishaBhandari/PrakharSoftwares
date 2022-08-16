@@ -18,7 +18,7 @@
       </a>
 
       <!-- Sidebar -->
-      <div class="sidebar">
+      <div class="sidebar" style="    width: 100%;">
           <!-- Sidebar user panel (optional) -->
           <div class="user-panel mt-3 pb-3 mb-3 d-flex">
               <div class="image">
@@ -36,45 +36,6 @@
                   data-accordion="false">
                   <!-- Add icons to the links using the .nav-icon class
      with font-awesome or any other icon font library -->
-                <li class="nav-item menu-open">
-                    <a href="{{ url('/dashboard') }}"
-                        class="nav-link {{ request()->is('dashboard') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Dashboard
-                        </p>
-                    </a>
-                    <a href="{{ url('/addnav') }}" class="nav-link {{ request()->is('addnav') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Add Nav
-                        </p>
-                    </a>
-                    <a href="{{ url('/allnav') }}" class="nav-link {{ request()->is('allnav')|| request()->is('edit/nav/*') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            All Nav
-                        </p>
-                    </a>
-                    <a href="{{ url('/addService') }}" class="nav-link {{ request()->is('addService') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Add Service
-                        </p>
-                    </a>
-                    <a href="{{ url('/allService') }}" class="nav-link {{ request()->is('allService') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            All Services
-                        </p>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-
                   <li class="nav-item menu-open">
                       <a href="{{ url('/dashboard') }}"
                           class="nav-link {{ request()->is('dashboard') ? 'active' : '' }}">
@@ -83,27 +44,83 @@
                               Dashboard
                           </p>
                       </a>
-                  </li>
-
-                  <li>
                       <a href="{{ url('/addnav') }}" class="nav-link {{ request()->is('addnav') ? 'active' : '' }}">
                           <i class="nav-icon fas fa-tachometer-alt"></i>
                           <p>
                               Add Nav
                           </p>
                       </a>
-                  </li>
-                  <li>
-                      <a href="{{ url('/allnav') }}" class="nav-link {{ request()->is('allnav')|| request()->is('edit/nav/*') ? 'active' : '' }}">
+                      <a href="{{ url('/allnav') }}"
+                          class="nav-link {{ request()->is('allnav') || request()->is('edit/nav/*') ? 'active' : '' }}">
                           <i class="nav-icon fas fa-tachometer-alt"></i>
                           <p>
                               All Nav
+                          </p>
+                      </a>
+                      <a href="{{ url('/addService') }}"
+                          class="nav-link {{ request()->is('addService') ? 'active' : '' }}">
+                          <i class="nav-icon fas fa-tachometer-alt"></i>
+                          <p>
+                              Add Service
+                          </p>
+                      </a>
+                      <a href="{{ url('/allService') }}"
+                          class="nav-link {{ request()->is('allService') ? 'active' : '' }}">
+                          <i class="nav-icon fas fa-tachometer-alt"></i>
+                          <p>
+                              All Services
+                          </p>
+                      </a>
+                      <a href="{{ url('/updatehome') }}"
+                          class="nav-link {{ request()->is('updatehome') ? 'active' : '' }}">
+                          <i class="nav-icon fas fa-tachometer-alt"></i>
+                          <p>
+                              Update Home
+                          </p>
+                      </a>
+                      <a href="{{ url('/allService') }}"
+                          class="nav-link {{ request()->is('allService') ? 'active' : '' }}">
+                          <i class="nav-icon fas fa-tachometer-alt"></i>
+                          <p>
+                              All Services
                           </p>
                       </a>
                   </li>
               </ul>
           </nav>
           <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+
+      <li class="nav-item menu-open">
+          <a href="{{ url('/dashboard') }}" class="nav-link {{ request()->is('dashboard') ? 'active' : '' }}">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                  Dashboard
+              </p>
+          </a>
+      </li>
+
+      <li>
+          <a href="{{ url('/addnav') }}" class="nav-link {{ request()->is('addnav') ? 'active' : '' }}">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                  Add Nav
+              </p>
+          </a>
+      </li>
+      <li>
+          <a href="{{ url('/allnav') }}"
+              class="nav-link {{ request()->is('allnav') || request()->is('edit/nav/*') ? 'active' : '' }}">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                  All Nav
+              </p>
+          </a>
+      </li>
+      </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
       </div>
       <!-- /.sidebar -->
   </aside>

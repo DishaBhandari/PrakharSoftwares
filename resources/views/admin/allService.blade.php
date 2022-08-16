@@ -47,7 +47,7 @@
                             @foreach ($data as $item)
                                 <tr>
                                     <th>{{ $i++ }}</th>
-                                    <td>{{ $item->getmenu->menu_name }}</td>
+                                    <td>{{ $item->menu_name }}</td>
                                     <td>{{ $item->meta_title }}</td>
                                     <td>{{ $item->meta_keyword }}</td>
                                     <td>{{ $item->meta_description }}</td>
@@ -59,7 +59,7 @@
                                     <td> <a onclick="return confirm('Are you sure?')"
                                             href="{{ $item->id }}" class="btn btn-danger"><i
                                                 class="fa-solid fa-trash"></i></a>
-                                        <a href="{{ route('editServices', $item->id }}" class="btn btn-success bg-black"><i
+                                        <a href="{{ $item->id }}" class="btn btn-success bg-black"><i
                                                 class="fa-solid fa-pen"></i></a>
                                     </td>
                                 </tr>

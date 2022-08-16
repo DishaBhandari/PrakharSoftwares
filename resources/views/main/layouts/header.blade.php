@@ -22,6 +22,7 @@
         href="{{ asset('main/assets/img/favicons/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16"
         href="{{ asset('main/assets/img/favicons/favicon-16x16.png') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('main/assets/img/favicons/favicon.ico') }}">
     <link rel="manifest" href="{{ asset('main/assets/img/favicons/manifest.json') }}">
     <meta name="msapplication-TileImage" content="{{ asset('main/assets/img/favicons/mstile-150x150.png') }}">
