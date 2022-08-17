@@ -50,7 +50,7 @@
                         </div>
 
                     </a>
-                    <a class="col-md-3 col-sm-6 col-12" href="#">
+                    <a class="col-md-3 col-sm-6 col-12" href="{{ route('homeEditAbout') }}">
                         <div class="info-box shadow-none">
                             <span class="info-box-icon bg-info"><i class="far fa-edit"></i></span>
                             <div class="info-box-content">
@@ -61,7 +61,7 @@
                         </div>
 
                     </a>
-                    <a class="col-md-3 col-sm-6 col-12" href="#">
+                    <a class="col-md-3 col-sm-6 col-12" href="{{ url('upadetHomeTestimonial') }}">
                         <div class="info-box shadow-none">
                             <span class="info-box-icon bg-info"><i class="far fa-edit"></i></span>
                             <div class="info-box-content">
@@ -72,7 +72,7 @@
                         </div>
 
                     </a>
-                    <a class="col-md-3 col-sm-6 col-12" href="#">
+                    <a class="col-md-3 col-sm-6 col-12" href="{{ url('updateHomeBrand') }}">
                         <div class="info-box shadow-none">
                             <span class="info-box-icon bg-info"><i class="far fa-edit"></i></span>
                             <div class="info-box-content">
@@ -83,18 +83,6 @@
                         </div>
 
                     </a>
-                    <a class="col-md-3 col-sm-6 col-12" href="#">
-                        <div class="info-box shadow-none">
-                            <span class="info-box-icon bg-info"><i class="far fa-edit"></i></span>
-                            <div class="info-box-content">
-                                <span class="info-box-text">Edit</span>
-                                <span class="info-box-number">Slide</span>
-                            </div>
-
-                        </div>
-
-                    </a>
-
 
                 </div>
         </section>

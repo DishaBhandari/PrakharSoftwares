@@ -26,8 +26,8 @@
         }
 
         /* .fancybox__toolbar__items--left {
-                                                                                                                                                                                        display: none !important;
-                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                display: none !important;
+                                                                                                                                                                                                                                                                                            } */
     </style>
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -88,51 +88,50 @@
         </section>
 
         <!-- ============================================-->
-        <!-- <section> begin ============================-->
+        <!-- Home About Section ============================-->
         <section class="bg-white text-center">
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-10 col-md-6">
-                        <h3 class="fs-2 fs-lg-3">Welcome to the Prakhar Softwares Solution</h3>
-                        <p class="px-lg-4 mt-3">Get expert consultancy and support with Elixir, an advisory firm that
-                            stand by your side always.</p>
-                        <hr class="short"
-                            data-zanim-xs='{"from":{"opacity":0,"width":0},"to":{"opacity":1,"width":"4.20873rem"},"duration":0.8}'
-                            data-zanim-trigger="scroll" />
-                    </div>
-                </div>
-                <div class="row mt-4 mt-md-5">
-                    <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                        <div class="ring-icon mx-auto" data-zanim-xs='{"delay":0}'><span class="far fa-chart-bar"></span>
+            @foreach ($about as $item)
+                <div class="container">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-10 col-md-6">
+                            <h3 class="fs-2 fs-lg-3">{{ $item->heading }}</h3>
+                            <p class="px-lg-4 mt-3">{{ $item->desc }}</p>
+                            <hr class="short"
+                                data-zanim-xs='{"from":{"opacity":0,"width":0},"to":{"opacity":1,"width":"4.20873rem"},"duration":0.8}'
+                                data-zanim-trigger="scroll" />
                         </div>
-                        <h5 class="mt-4" data-zanim-xs='{"delay":0.1}'>Business Consulting</h5>
-                        <p class="mb-0 mt-3 px-3" data-zanim-xs='{"delay":0.2}'>Solution for every business related
-                            problems, readily <br /> and skillfully.</p>
                     </div>
-                    <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                        <div class="ring-icon mx-auto" data-zanim-xs='{"delay":0}'><span class="far fa-bell"></span>
+                    <div class="row mt-4 mt-md-5">
+                        <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                            <div class="ring-icon mx-auto" data-zanim-xs='{"delay":0}'><span
+                                    class="far fa-chart-bar"></span>
+                            </div>
+                            <h5 class="mt-4" data-zanim-xs='{"delay":0.1}'>{{ $item->heading1 }}g</h5>
+                            <p class="mb-0 mt-3 px-3" data-zanim-xs='{"delay":0.2}'>{{ $item->desc1 }}</p>
                         </div>
-                        <h5 class="mt-4" data-zanim-xs='{"delay":0.1}'>Risk Management</h5>
-                        <p class="mb-0 mt-3 px-3" data-zanim-xs='{"delay":0.2}'>Calculate every possible risk in your
-                            business, take <br /> control over them.</p>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                        <div class="ring-icon mx-auto" data-zanim-xs='{"delay":0}'><span class="far fa-lightbulb"></span>
+                        <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                            <div class="ring-icon mx-auto" data-zanim-xs='{"delay":0}'><span class="far fa-bell"></span>
+                            </div>
+                            <h5 class="mt-4" data-zanim-xs='{"delay":0.1}'>{{ $item->heading2 }}</h5>
+                            <p class="mb-0 mt-3 px-3" data-zanim-xs='{"delay":0.2}'>{{ $item->desc2 }}</p>
                         </div>
-                        <h5 class="mt-4" data-zanim-xs='{"delay":0.1}'>Market Research</h5>
-                        <p class="mb-0 mt-3 px-3" data-zanim-xs='{"delay":0.2}'>Know the market before taking any
-                            step, reduce <br /> risks before you go.</p>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                        <div class="ring-icon mx-auto" data-zanim-xs='{"delay":0}'><span class="fas fa-headset"></span>
+                        <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                            <div class="ring-icon mx-auto" data-zanim-xs='{"delay":0}'><span
+                                    class="far fa-lightbulb"></span>
+                            </div>
+                            <h5 class="mt-4" data-zanim-xs='{"delay":0.1}'>{{ $item->heading3 }}</h5>
+                            <p class="mb-0 mt-3 px-3" data-zanim-xs='{"delay":0.2}'>{{ $item->desc3 }}</p>
                         </div>
-                        <h5 class="mt-4" data-zanim-xs='{"delay":0.1}'>Quality Services</h5>
-                        <p class="mb-0 mt-3 px-3" data-zanim-xs='{"delay":0.2}'>Experience unparalleled service, from
-                            beginning <br /> to final construction.</p>
+                        <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                            <div class="ring-icon mx-auto" data-zanim-xs='{"delay":0}'><span class="fas fa-headset"></span>
+                            </div>
+                            <h5 class="mt-4" data-zanim-xs='{"delay":0.1}'>{{ $item->heading4 }}</h5>
+                            <p class="mb-0 mt-3 px-3" data-zanim-xs='{"delay":0.2}'>{{ $item->desc4 }}</p>
+                        </div>
                     </div>
-                </div>
-            </div><!-- end of .container-->
-        </section><!-- <section> close ============================-->
+                </div><!-- end of .container-->
+            @endforeach
+        </section><!-- Home About Section close ============================-->
         <!-- ============================================-->
 
 
@@ -141,7 +140,7 @@
 
 
         <!-- ============================================-->
-        <!-- <Services> begin ============================-->
+        <!-- Home Services begin ============================-->
         <section class="bg-100">
             <div class="container">
                 <div class="text-center mb-6">
@@ -279,10 +278,10 @@
                 </div>
             </div><!-- end of .container-->
 
-        </section><!-- <section> close ============================-->
+        </section><!-- Home Services close ============================-->
         <!-- ============================================-->
         <!-- ============================================-->
-        <!-- <section> begin ============================-->
+        <!-- Home Gallry begin ============================-->
         <section class="bg-white  text-center">
             <div class="container">
                 <div class="text-center mb-6">
@@ -346,7 +345,7 @@
                     <a class="bg-success text-black btn col-4 mt-5 mx-auto" href="Gallary">Show More</a>
                 </div>
             </div><!-- end of .container-->
-        </section><!-- <section> close ============================-->
+        </section><!-- Home Gallry close ============================-->
         <!-- ============================================-->
 
 
@@ -354,7 +353,7 @@
 
 
         <!-- ============================================-->
-        <!-- <section> begin ============================-->
+        <!--Home why begin ============================-->
         <section>
             <div class="container">
                 <div class="text-center mb-7">
@@ -396,14 +395,14 @@
                     </div>
                 </div>
             </div><!-- end of .container-->
-        </section><!-- <section> close ============================-->
+        </section><!-- Home why close ============================-->
         <!-- ============================================-->
 
 
 
 
         <!-- ============================================-->
-        <!-- <section> begin ============================-->
+        <!-- Home Enqury begin ============================-->
         <section class="bg-primary">
             <div class="container">
                 <div class="row align-items-center text-white">
@@ -438,7 +437,7 @@
                     </div>
                 </div>
             </div><!-- end of .container-->
-        </section><!-- <section> close ============================-->
+        </section><!-- Home Enqury close ============================-->
         <!-- ============================================-->
 
 
@@ -446,53 +445,24 @@
 
 
         <!-- ============================================-->
-        <!-- <section> begin ============================-->
+        <!-- Home testimonial begin ============================-->
         <section class="bg-white">
             <div class="container">
                 <div class="swiper theme-slider" data-swiper='{"loop":true,"slidesPerView":1,"autoplay":{"delay":5000}}'>
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="row px-lg-8">
-                                <div class="col-4 col-md-3 mx-auto"><img class="rounded-3 mx-auto img-fluid"
-                                        src="{{ asset('main/assets/img/client1.png') }}" alt="Member" /></div>
-                                <div class="col-md-9 mt-4 mt-md-0 px-4 px-sm-3">
-                                    <p class="lead">Their work on our website and Internet marketing has made a
-                                        significant different to our business. We’ve seen a 425% increase in quote
-                                        requests from the website which has been pretty remarkable – but I’d always like
-                                        to see more!</p>
-                                    <h6 class="fs-0 mb-1 mt-4">Michael Clarke</h6>
-                                    <p class="mb-0 text-500">CEO, A.E.T Institute</p>
+                        @foreach ($test as $item)
+                            <div class="swiper-slide">
+                                <div class="row px-lg-8">
+                                    <div class="col-4 col-md-3 mx-auto"><img class="rounded-3 mx-auto img-fluid"
+                                            src="{{ asset('testimonial/' . $item->image) }}" alt="Member" /></div>
+                                    <div class="col-md-9 mt-4 mt-md-0 px-4 px-sm-3">
+                                        <p class="lead">{{ $item->desc }}</p>
+                                        <h6 class="fs-0 mb-1 mt-4">{{ $item->name }}</h6>
+                                        <p class="mb-0 text-500">{{ $item->info }}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="row px-lg-8">
-                                <div class="col-4 col-md-3 mx-auto"><img class="rounded-3 mx-auto img-fluid"
-                                        src="{{ asset('main/assets/img/client2.png') }}" alt="Member" /></div>
-                                <div class="col-md-9 mt-4 mt-md-0 px-4 px-sm-3">
-                                    <p class="lead">Writing case studies was a daunting task for us. We didn’t know
-                                        where to begin or what questions to ask, and clients never seemed to follow
-                                        through when we asked. Elixir team did everything – with almost no time or
-                                        effort for me!</p>
-                                    <h6 class="fs-0 mb-1 mt-4">Maria Sharapova</h6>
-                                    <p class="mb-0 text-500">Managing Director, Themewagon Inc.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="row px-lg-8">
-                                <div class="col-4 col-md-3 mx-auto"><img class="rounded-3 mx-auto img-fluid"
-                                        src="{{ asset('main/assets/img/client3.png') }}" alt="Member" /></div>
-                                <div class="col-md-9 mt-4 mt-md-0 px-4 px-sm-3">
-                                    <p class="lead">As a sales gamification company, we were skeptical to work with a
-                                        consultant to optimize our sales emails, but Elixir was highly recommended by
-                                        many other Y-Combinator startups we knew. Elixir helped us run a ~6 week email
-                                        campaign.</p>
-                                    <h6 class="fs-0 mb-1 mt-4">David Beckham</h6>
-                                    <p class="mb-0 text-500">Chairman, Harmony Corporation</p>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <div class="swiper-nav">
                         <div class="swiper-button-prev icon-item icon-item-lg"><span
@@ -502,7 +472,7 @@
                     </div>
                 </div>
             </div><!-- end of .container-->
-        </section><!-- <section> close ============================-->
+        </section><!-- Home testimonial close ============================-->
         <!-- ============================================-->
 
         <div class="bg-200 py-6">

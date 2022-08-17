@@ -15,6 +15,16 @@ return new class extends Migration
     {
         Schema::create('home_abouts', function (Blueprint $table) {
             $table->id();
+            $table->string('heading', 100);
+            $table->string('desc', 100);
+            $table->string('heading1', 100);
+            $table->string('desc1', 400);
+            $table->string('heading2', 100);
+            $table->string('desc2', 400);
+            $table->string('heading3', 100);
+            $table->string('desc3', 400);
+            $table->string('heading4', 100);
+            $table->string('desc4', 400);
             $table->timestamps();
         });
     }

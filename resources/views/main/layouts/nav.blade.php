@@ -15,13 +15,12 @@
     <div class="container">
         <div class="row align-items-center gx-4">
             <div class="col-auto d-none d-lg-block fs--1"><span class="fas fa-map-marker-alt text-warning me-2"
-                    data-fa-transform="grow-3"></span>1010 Avenue, New York, NY 10018 US. </div>
+                    data-fa-transform="grow-3"></span>C – 11, LGF, Opp. State Bank of India, Malviya Nagar</div>
             <div class="col-auto ms-md-auto order-md-2 d-none d-sm-flex fs--1 align-items-center"><span
                     class="fas fa-clock text-warning me-2" data-fa-transform="grow-3"></span>Mon-Sat, 8.00-18.00.
                 Sunday CLOSED</div>
-            <div class="col-auto"><span class="fas fa-phone-alt text-warning" data-fa-transform="shrink-3"></span><a
-                    class="ms-2 fs--1 d-inline text-white fw-bold" href="tel:2123865575">212 386 5575, 212 386
-                    5576</a></div>
+            <div class="col-auto"><a
+                    class="ms-2 fs--1 d-inline text-white fw-bold" >Welcome to Prakhar Software Solutions Pvt. Ltd.</a></div>
         </div>
     </div>
 </div>

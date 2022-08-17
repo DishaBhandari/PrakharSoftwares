@@ -53,6 +53,18 @@ Route::domain('admin.in')->group(function () {
         Route::get('editslide/{id}', [HomeUpdateContrller::class, 'editslide']);
         Route::post('addSlideform', [HomeUpdateContrller::class, 'addSlideform'])->name('addSlideform');
         Route::post('updateSlideform', [HomeUpdateContrller::class, 'updateSlideform'])->name('updateSlideform');
+        Route::post('updateHomeAboutform', [HomeUpdateContrller::class, 'updateHomeAboutform'])->name('updateHomeAboutform');
+        Route::post('addTestimonialForm', [HomeUpdateContrller::class, 'addTestimonialForm'])->name('addTestimonialForm');
+        Route::post('updateTestimonialForm', [HomeUpdateContrller::class, 'updateTestimonialForm'])->name('updateTestimonialForm');
+        Route::post('addbrandForm', [HomeUpdateContrller::class, 'addbrandForm'])->name('addbrandForm');
+        Route::get('homeEditAbout', [HomeUpdateContrller::class, 'homeEditAbout'])->name('homeEditAbout');
+        Route::get('upadetHomeTestimonial', [HomeUpdateContrller::class, 'upadetHomeTestimonial']);
+        Route::get('addTestimonial', [HomeUpdateContrller::class, 'addTestimonial']);
+        Route::get('updateHomeBrand', [HomeUpdateContrller::class, 'updateHomeBrand']);
+        Route::get('addBrand', [HomeUpdateContrller::class, 'addBrand']);
+        Route::get('editTestimonial/{id}', [HomeUpdateContrller::class, 'editTestimonial']);
+        Route::get('deleteTestimonial/{id}', [HomeUpdateContrller::class, 'deleteTestimonial']);
+        Route::get('deletebrand/{id}', [HomeUpdateContrller::class, 'deletebrand']);
 
         Route::get('/test', [ServiceController::class, 'index'])->name('addService');
     });

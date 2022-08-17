@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\SildeUpdate;
 use App\Http\Controllers\loadPage;
-
+use App\Models\HomeAbout;
 use App\Models\menuBar;
+use App\Models\HomeTestimonial;
 use Illuminate\Http\Request;
 
 class mainController extends Controller
@@ -67,7 +69,9 @@ class mainController extends Controller
     {
         $nav = $this->header(0);
         $slide = SildeUpdate::get();
-        return view('main.index', compact('nav','slide'));
+        $about = HomeAbout::get();
+        $test = HomeTestimonial::get();
+        return view('main.index', compact('nav', 'slide', 'about', 'test'));
     }
 
     // about page loading function 
